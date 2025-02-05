@@ -1,5 +1,10 @@
 {
-    "COMPILER_PATH": "C:/TDM-GCC-64/bin",
+
+    "COMPILER_PATH": "C:/TDM-GCC-64",
+    "BIN_FOLDER": "bin",
+    
     "MAKE_EXE" : "mingw32-make.exe",
-    "TARGET": "program"// same as makefile target
+    // same as makefile target
+    "TARGET": "program",
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools" 
 }
