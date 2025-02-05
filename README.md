@@ -1,8 +1,6 @@
-# Proyect template
-
-task.json es para compilar el proyecto
-launch.json es para lanzar el ejecutable y depurar. Primero ejecuta la task de "preLaunchTask" y luego el comando.
+# Portable CPP Proyect template
 
 ## Visual Studio Code  
+It works with make.exe from w64devkit-x64-2.0.0
 
 - Revisar el nombre del programa y versión en Makefile.
