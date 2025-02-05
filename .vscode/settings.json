@@ -1,4 +1,5 @@
 {
-    "COMPILER_PATH": "D:/Apps/w64devkit-x64-2.0.0/bin/",
+    "COMPILER_PATH": "C:/TDM-GCC-64/bin",
+    "MAKE_EXE" : "mingw32-make.exe",
     "TARGET": "program"// same as makefile target
 }
