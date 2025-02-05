@@ -6,6 +6,8 @@ Currently, it supports only **Windows** compilations on **Visual Studio Code**.
 
 ## Visual Studio Code
 
+The compilation process will generate object files in the `obj/debug` or `obj/release` directories, depending on the selected configuration. The final executable will be placed in the `bin/debug` or `bin/release` folder accordingly.
+
 The project has been tested with the following extensions installed:
 
 - **C/C++** by Microsoft
