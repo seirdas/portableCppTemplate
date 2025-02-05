@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile with make",
+            "type": "shell",
+            "command": "${config:COMPILER_PATH}make.exe",
+            "args": [],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles the project using make and all target (release)."
+        },
+        {
+            "label": "compile with make (debug)",
+            "type": "shell",
+            "command": "${config:COMPILER_PATH}make.exe",
+            "args": [
+                "debug"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles the project using make with the debug target."
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "${config:COMPILER_PATH}make.exe",
+            "args": [
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Clean the build."
+        }
+    ]
+}

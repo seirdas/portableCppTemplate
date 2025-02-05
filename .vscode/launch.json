@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Release",
+            "type": "cppdbg", 
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bin/Release/${config:TARGET}.exe",
+            "args": [],
+            "externalConsole": false,
+            "preLaunchTask": "compile with make",
+            "miDebuggerPath": "${config:COMPILER_PATH}/gdb.exe",
+            "miDebuggerArgs": ""
+        },
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bin/Debug/${config:TARGET}.exe",
+            "args": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "compile with make (debug)",
+            "miDebuggerPath": "${config:COMPILER_PATH}/gdb.exe",
+            "miDebuggerArgs": ""
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+{
+    "COMPILER_PATH": "D:/Apps/w64devkit-x64-2.0.0/bin/",
+    "TARGET": "program"// same as makefile target
+}
