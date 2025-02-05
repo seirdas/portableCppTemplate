@@ -16,11 +16,11 @@ The project has been tested with the following extensions installed:
 
 The following compilers have been tested and confirmed to work with this project:
 
-- **make.exe** from **w64devkit-x64-2.0.0**
-- **mingw32-make.exe** from **TDM-GCC-64**
+- **w64devkit-x64-2.0.0** with **make.exe**, **g++** and **gdb.exe**.
+- **TDM-GCC-64** with **mingw32-make.exe**, **g++** and **gdb.exe**.
 
 The project includes specific steps for compiling in Visual Studio Code:
 
 - **Compiler Path and Executable Names**: Verify that the paths and executable name for `make` are correctly set in *settings.json*. Ensure that `g++.exe` and `gdb.exe` executables are located in the same directory.
-- **Compilation and Debugging**: Use the shortcut `Ctrl+Shift+B` to compile the project with `make` and `g++`. Press `F5` to start the program. Note that the debug configuration is optimized for debugging using `gbd`, and debugging is not possible with the release configuration. Ensure `gdb` is installed for debugging.
+- **Compilation and Debugging**: Use the shortcut `Ctrl+Shift+B` to compile the project with `make` and `g++`. Press `F5` to start the program. Note that the debug configuration is optimized for debugging using `gbd`, and debugging is not possible with the release configuration.
 - **Build Configurations**: You can use release, debug, and clean configurations from *launch.json* by `F5` shortcut.
