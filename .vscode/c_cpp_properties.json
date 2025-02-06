@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "${config:COMPILER_PATH}/lib"
             ],
-            "compilerPath": "${config:COMPILER_PATH}/bin/gcc.exe",
+            "compilerPath": "${config:COMPILER_PATH}/bin/g++.exe",
             "cStandard": "c23",
             "cppStandard": "c++14",
             "intelliSenseMode": "windows-gcc-x64"
