@@ -4,7 +4,7 @@
         {
             "label": "compile with make",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/${config:BIN_FOLDER}/${config:MAKE_EXE}",
+            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
             "args": [],
             "group": "build",
             "problemMatcher": [
@@ -15,7 +15,7 @@
         {
             "label": "compile with make (debug)",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/${config:BIN_FOLDER}/${config:MAKE_EXE}",
+            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
             "args": [
                 "debug"
             ],
@@ -28,7 +28,7 @@
         {
             "label": "clean",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/${config:BIN_FOLDER}/${config:MAKE_EXE}",
+            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
             "args": [
                 "clean"
             ],

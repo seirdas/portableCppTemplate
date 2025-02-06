@@ -1,10 +1,12 @@
 {
 
-    "COMPILER_PATH": "C:/TDM-GCC-64",
-    "BIN_FOLDER": "bin",
+    "COMPILER_PATH": "D:\\Apps\\w64devkit-x64-2.0.0",
     
-    "MAKE_EXE" : "mingw32-make.exe",
+    "MAKE_EXE" : "make.exe",
+    "GDB_EXE" : "gdb.exe",
+
     // same as makefile target
     "TARGET": "program",
+
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools" 
 }
