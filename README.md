@@ -4,7 +4,7 @@ This template includes a simple `main.cpp` that utilizes a function from another
 
 Requisites: make, g++, gdb, gcc
 
-Currently, it supports only **Windows** compilations on **Visual Studio Code**.
+Currently, it supports only **Windows x64** compilations on **Visual Studio Code**.
 
 ## Visual Studio Code
 

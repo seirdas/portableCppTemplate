@@ -3,7 +3,7 @@ TARGET = program.exe
 VERSION = 0.1
 COPYRIGHT = "Copyright (C)"
 
-# Rutas
+# Rutas del proyecto
 COMPILER_DIR := $(dir $(MAKE))
 SRCDIR = src
 OBJDIR = obj
@@ -30,7 +30,7 @@ endif
 
 # Archivos de código (Carpeta /src)
 SOURCES := $(wildcard $(SRCDIR)/*.cpp)
-HEADERS := $(wildcard $(SRCDIR)/*.h)
+HEADERS := $(wildcard $(SRCDIR)/*.h*)
 
 # Objetos
 OBJS_RELEASE := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR_RELEASE)/%.o)
