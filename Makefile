@@ -17,8 +17,15 @@ BINDIR_DEBUG = $(BINDIR)\debug
 
 # Parametros del compilador
 CC = "$(COMPILER_DIR)g++" -B"$(COMPILER_DIR)"
-CFLAGS = -Wall -Wextra -Isrc
+CFLAGS = -Wall -Wextra -Isrc 
 LDFLAGS = -L "$(COMPILER_DIR)lib"
+
+# Parametros de SFML
+SFML_CFLAGS 					:= -I$(wildcard include/SFML*/)
+SFML_RELEASE_STATIC_LDFLAGS 	:= -L$(wildcard lib/SFML*/*-s.a)
+SFML_DEBUG_DYNAMIC_LDFLAGS 		:= -L$(wildcard lib/SFML*/*d.a)
+SFML_DEBUG_STATIC_LDFLAGS 		:= -L$(wildcard lib/SFML*/*-s-d.a)
+SFML_RELEASE_DYNAMIC_LDFLAGS 	:= -L$(filter-out %d.a %-s.a %-s-d.a %cmake, $(wildcard lib/SFML*/*))
 
 # Comandos
 # Check for Windows
@@ -46,7 +53,14 @@ DEBUG_RES_OBJECTS := $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR_DEBUG)/%.res.o)
 
 ################################
 # Comandos
-.PHONY: all clean debug release
+.PHONY: all clean debug release info
+
+info:
+	@echo # SFML_CFLAGS: $(SFML_CFLAGS)
+	@echo # SFML_RELEASE_DYNAMIC_LDFLAGS: $(SFML_RELEASE_DYNAMIC_LDFLAGS)
+	@echo # SFML_RELEASE_STATIC_LDFLAGS: $(SFML_RELEASE_STATIC_LDFLAGS)
+	@echo # SFML_DEBUG_DYNAMIC_LDFLAGS: $(SFML_DEBUG_DYNAMIC_LDFLAGS)
+	@echo # SFML_DEBUG_STATIC_LDFLAGS: $(SFML_DEBUG_STATIC_LDFLAGS)
 
 # Main Tasks
 all: release
@@ -63,12 +77,13 @@ $(OBJDIR_RELEASE) $(BINDIR_RELEASE) $(OBJDIR_DEBUG) $(BINDIR_DEBUG):
 # Link the object files to create the executable
 $(BINDIR_RELEASE)/$(TARGET): $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS)
 	@echo ------ Compiling started: $(TARGET) ------
-	$(CC) $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS) -o $@ $(LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
+	@echo ------ Compiling started: $(TARGET) ------
+	$(CC) $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_RELEASE_DYNAMIC_LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo --- Compilation complete!
 
 $(BINDIR_DEBUG)/$(TARGET): $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS)
 	@echo ------ Compiling started: $(TARGET) ------
-	$(CC) $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) -o $@ $(LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
+	$(CC) $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_DEBUG_DYNAMIC_LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo --- Debug compilation complete!
 
 # Compile each .cpp file to an object file

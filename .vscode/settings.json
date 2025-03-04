@@ -1,6 +1,6 @@
 {
 
-    "COMPILER_PATH": "G:\\Apps\\w64devkit-x64-2.0.0",
+    "COMPILER_PATH": "D:\\Apps\\w64devkit-x64-2.0.0",
     
     "MAKE_EXE" : "make.exe",
     "GDB_EXE" : "gdb.exe",
@@ -10,5 +10,5 @@
 
     // vscode configuration
     "editor.mouseWheelZoom": true,
-    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.errorSquiggles": "enabled"
 }

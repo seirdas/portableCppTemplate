@@ -35,6 +35,17 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "Clean the build."
+        },
+        {
+            "label": "info",
+            "type": "shell",
+            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "args": [
+                "info"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Print info."
         }
     ]
 }
