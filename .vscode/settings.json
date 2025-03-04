@@ -8,5 +8,11 @@
     // same as makefile target
     "TARGET": "program",
 
+<<<<<<< Updated upstream
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools" 
+=======
+    // vscode configuration
+    "editor.mouseWheelZoom": true,
+    "C_Cpp.errorSquiggles": "enabled"
+>>>>>>> Stashed changes
 }
