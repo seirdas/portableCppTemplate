@@ -1,0 +1,1207 @@
+dependencies
++---SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit
+    +---SFML-3.0.0
+        +---bin
+        ¦       sfml-audio-3.dll
+        ¦       sfml-audio-d-3.dll
+        ¦       sfml-graphics-3.dll
+        ¦       sfml-graphics-d-3.dll
+        ¦       sfml-network-3.dll
+        ¦       sfml-network-d-3.dll
+        ¦       sfml-system-3.dll
+        ¦       sfml-system-d-3.dll
+        ¦       sfml-window-3.dll
+        ¦       sfml-window-d-3.dll
+        ¦       
+        +---doc
+        ¦   ¦   SFML.tag
+        ¦   ¦   
+        ¦   +---html
+        ¦       ¦   Angle_8hpp.html
+        ¦       ¦   Angle_8hpp_source.html
+        ¦       ¦   annotated.html
+        ¦       ¦   AudioResource_8hpp.html
+        ¦       ¦   AudioResource_8hpp_source.html
+        ¦       ¦   Audio_2Export_8hpp.html
+        ¦       ¦   Audio_2Export_8hpp_source.html
+        ¦       ¦   Audio_8hpp.html
+        ¦       ¦   Audio_8hpp_source.html
+        ¦       ¦   bc_s.png
+        ¦       ¦   bc_sd.png
+        ¦       ¦   BlendMode_8hpp.html
+        ¦       ¦   BlendMode_8hpp_source.html
+        ¦       ¦   CircleShape_8hpp.html
+        ¦       ¦   CircleShape_8hpp_source.html
+        ¦       ¦   classes.html
+        ¦       ¦   classsf_1_1Angle-members.html
+        ¦       ¦   classsf_1_1Angle.html
+        ¦       ¦   classsf_1_1AudioResource-members.html
+        ¦       ¦   classsf_1_1AudioResource.html
+        ¦       ¦   classsf_1_1AudioResource.png
+        ¦       ¦   classsf_1_1CircleShape-members.html
+        ¦       ¦   classsf_1_1CircleShape.html
+        ¦       ¦   classsf_1_1CircleShape.png
+        ¦       ¦   classsf_1_1Clock-members.html
+        ¦       ¦   classsf_1_1Clock.html
+        ¦       ¦   classsf_1_1Color-members.html
+        ¦       ¦   classsf_1_1Color.html
+        ¦       ¦   classsf_1_1Context-members.html
+        ¦       ¦   classsf_1_1Context.html
+        ¦       ¦   classsf_1_1Context.png
+        ¦       ¦   classsf_1_1ConvexShape-members.html
+        ¦       ¦   classsf_1_1ConvexShape.html
+        ¦       ¦   classsf_1_1ConvexShape.png
+        ¦       ¦   classsf_1_1Cursor-members.html
+        ¦       ¦   classsf_1_1Cursor.html
+        ¦       ¦   classsf_1_1Drawable-members.html
+        ¦       ¦   classsf_1_1Drawable.html
+        ¦       ¦   classsf_1_1Drawable.png
+        ¦       ¦   classsf_1_1Event-members.html
+        ¦       ¦   classsf_1_1Event.html
+        ¦       ¦   classsf_1_1Exception.html
+        ¦       ¦   classsf_1_1Exception.png
+        ¦       ¦   classsf_1_1FileInputStream-members.html
+        ¦       ¦   classsf_1_1FileInputStream.html
+        ¦       ¦   classsf_1_1FileInputStream.png
+        ¦       ¦   classsf_1_1Font-members.html
+        ¦       ¦   classsf_1_1Font.html
+        ¦       ¦   classsf_1_1Ftp-members.html
+        ¦       ¦   classsf_1_1Ftp.html
+        ¦       ¦   classsf_1_1Ftp_1_1DirectoryResponse-members.html
+        ¦       ¦   classsf_1_1Ftp_1_1DirectoryResponse.html
+        ¦       ¦   classsf_1_1Ftp_1_1DirectoryResponse.png
+        ¦       ¦   classsf_1_1Ftp_1_1ListingResponse-members.html
+        ¦       ¦   classsf_1_1Ftp_1_1ListingResponse.html
+        ¦       ¦   classsf_1_1Ftp_1_1ListingResponse.png
+        ¦       ¦   classsf_1_1Ftp_1_1Response-members.html
+        ¦       ¦   classsf_1_1Ftp_1_1Response.html
+        ¦       ¦   classsf_1_1Ftp_1_1Response.png
+        ¦       ¦   classsf_1_1GlResource-members.html
+        ¦       ¦   classsf_1_1GlResource.html
+        ¦       ¦   classsf_1_1GlResource.png
+        ¦       ¦   classsf_1_1GlResource_1_1TransientContextLock-members.html
+        ¦       ¦   classsf_1_1GlResource_1_1TransientContextLock.html
+        ¦       ¦   classsf_1_1Http-members.html
+        ¦       ¦   classsf_1_1Http.html
+        ¦       ¦   classsf_1_1Http_1_1Request-members.html
+        ¦       ¦   classsf_1_1Http_1_1Request.html
+        ¦       ¦   classsf_1_1Http_1_1Response-members.html
+        ¦       ¦   classsf_1_1Http_1_1Response.html
+        ¦       ¦   classsf_1_1Image-members.html
+        ¦       ¦   classsf_1_1Image.html
+        ¦       ¦   classsf_1_1InputSoundFile-members.html
+        ¦       ¦   classsf_1_1InputSoundFile.html
+        ¦       ¦   classsf_1_1InputStream-members.html
+        ¦       ¦   classsf_1_1InputStream.html
+        ¦       ¦   classsf_1_1InputStream.png
+        ¦       ¦   classsf_1_1IpAddress-members.html
+        ¦       ¦   classsf_1_1IpAddress.html
+        ¦       ¦   classsf_1_1MemoryInputStream-members.html
+        ¦       ¦   classsf_1_1MemoryInputStream.html
+        ¦       ¦   classsf_1_1MemoryInputStream.png
+        ¦       ¦   classsf_1_1Music-members.html
+        ¦       ¦   classsf_1_1Music.html
+        ¦       ¦   classsf_1_1Music.png
+        ¦       ¦   classsf_1_1OutputSoundFile-members.html
+        ¦       ¦   classsf_1_1OutputSoundFile.html
+        ¦       ¦   classsf_1_1Packet-members.html
+        ¦       ¦   classsf_1_1Packet.html
+        ¦       ¦   classsf_1_1Rect-members.html
+        ¦       ¦   classsf_1_1Rect.html
+        ¦       ¦   classsf_1_1RectangleShape-members.html
+        ¦       ¦   classsf_1_1RectangleShape.html
+        ¦       ¦   classsf_1_1RectangleShape.png
+        ¦       ¦   classsf_1_1RenderTarget-members.html
+        ¦       ¦   classsf_1_1RenderTarget.html
+        ¦       ¦   classsf_1_1RenderTarget.png
+        ¦       ¦   classsf_1_1RenderTexture-members.html
+        ¦       ¦   classsf_1_1RenderTexture.html
+        ¦       ¦   classsf_1_1RenderTexture.png
+        ¦       ¦   classsf_1_1RenderWindow-members.html
+        ¦       ¦   classsf_1_1RenderWindow.html
+        ¦       ¦   classsf_1_1RenderWindow.png
+        ¦       ¦   classsf_1_1Shader-members.html
+        ¦       ¦   classsf_1_1Shader.html
+        ¦       ¦   classsf_1_1Shader.png
+        ¦       ¦   classsf_1_1Shape-members.html
+        ¦       ¦   classsf_1_1Shape.html
+        ¦       ¦   classsf_1_1Shape.png
+        ¦       ¦   classsf_1_1Socket-members.html
+        ¦       ¦   classsf_1_1Socket.html
+        ¦       ¦   classsf_1_1Socket.png
+        ¦       ¦   classsf_1_1SocketSelector-members.html
+        ¦       ¦   classsf_1_1SocketSelector.html
+        ¦       ¦   classsf_1_1Sound-members.html
+        ¦       ¦   classsf_1_1Sound.html
+        ¦       ¦   classsf_1_1Sound.png
+        ¦       ¦   classsf_1_1SoundBuffer-members.html
+        ¦       ¦   classsf_1_1SoundBuffer.html
+        ¦       ¦   classsf_1_1SoundBufferRecorder-members.html
+        ¦       ¦   classsf_1_1SoundBufferRecorder.html
+        ¦       ¦   classsf_1_1SoundBufferRecorder.png
+        ¦       ¦   classsf_1_1SoundFileFactory-members.html
+        ¦       ¦   classsf_1_1SoundFileFactory.html
+        ¦       ¦   classsf_1_1SoundFileReader-members.html
+        ¦       ¦   classsf_1_1SoundFileReader.html
+        ¦       ¦   classsf_1_1SoundFileWriter-members.html
+        ¦       ¦   classsf_1_1SoundFileWriter.html
+        ¦       ¦   classsf_1_1SoundRecorder-members.html
+        ¦       ¦   classsf_1_1SoundRecorder.html
+        ¦       ¦   classsf_1_1SoundRecorder.png
+        ¦       ¦   classsf_1_1SoundSource-members.html
+        ¦       ¦   classsf_1_1SoundSource.html
+        ¦       ¦   classsf_1_1SoundSource.png
+        ¦       ¦   classsf_1_1SoundStream-members.html
+        ¦       ¦   classsf_1_1SoundStream.html
+        ¦       ¦   classsf_1_1SoundStream.png
+        ¦       ¦   classsf_1_1Sprite-members.html
+        ¦       ¦   classsf_1_1Sprite.html
+        ¦       ¦   classsf_1_1Sprite.png
+        ¦       ¦   classsf_1_1String-members.html
+        ¦       ¦   classsf_1_1String.html
+        ¦       ¦   classsf_1_1TcpListener-members.html
+        ¦       ¦   classsf_1_1TcpListener.html
+        ¦       ¦   classsf_1_1TcpListener.png
+        ¦       ¦   classsf_1_1TcpSocket-members.html
+        ¦       ¦   classsf_1_1TcpSocket.html
+        ¦       ¦   classsf_1_1TcpSocket.png
+        ¦       ¦   classsf_1_1Text-members.html
+        ¦       ¦   classsf_1_1Text.html
+        ¦       ¦   classsf_1_1Text.png
+        ¦       ¦   classsf_1_1Texture-members.html
+        ¦       ¦   classsf_1_1Texture.html
+        ¦       ¦   classsf_1_1Texture.png
+        ¦       ¦   classsf_1_1Time-members.html
+        ¦       ¦   classsf_1_1Time.html
+        ¦       ¦   classsf_1_1Transform-members.html
+        ¦       ¦   classsf_1_1Transform.html
+        ¦       ¦   classsf_1_1Transformable-members.html
+        ¦       ¦   classsf_1_1Transformable.html
+        ¦       ¦   classsf_1_1Transformable.png
+        ¦       ¦   classsf_1_1UdpSocket-members.html
+        ¦       ¦   classsf_1_1UdpSocket.html
+        ¦       ¦   classsf_1_1UdpSocket.png
+        ¦       ¦   classsf_1_1Utf.html
+        ¦       ¦   classsf_1_1Utf_3_0116_01_4-members.html
+        ¦       ¦   classsf_1_1Utf_3_0116_01_4.html
+        ¦       ¦   classsf_1_1Utf_3_0132_01_4-members.html
+        ¦       ¦   classsf_1_1Utf_3_0132_01_4.html
+        ¦       ¦   classsf_1_1Utf_3_018_01_4-members.html
+        ¦       ¦   classsf_1_1Utf_3_018_01_4.html
+        ¦       ¦   classsf_1_1Vector2-members.html
+        ¦       ¦   classsf_1_1Vector2.html
+        ¦       ¦   classsf_1_1Vector3-members.html
+        ¦       ¦   classsf_1_1Vector3.html
+        ¦       ¦   classsf_1_1VertexArray-members.html
+        ¦       ¦   classsf_1_1VertexArray.html
+        ¦       ¦   classsf_1_1VertexArray.png
+        ¦       ¦   classsf_1_1VertexBuffer-members.html
+        ¦       ¦   classsf_1_1VertexBuffer.html
+        ¦       ¦   classsf_1_1VertexBuffer.png
+        ¦       ¦   classsf_1_1VideoMode-members.html
+        ¦       ¦   classsf_1_1VideoMode.html
+        ¦       ¦   classsf_1_1View-members.html
+        ¦       ¦   classsf_1_1View.html
+        ¦       ¦   classsf_1_1Window-members.html
+        ¦       ¦   classsf_1_1Window.html
+        ¦       ¦   classsf_1_1Window.png
+        ¦       ¦   classsf_1_1WindowBase-members.html
+        ¦       ¦   classsf_1_1WindowBase.html
+        ¦       ¦   classsf_1_1WindowBase.png
+        ¦       ¦   clipboard.js
+        ¦       ¦   Clipboard_8hpp.html
+        ¦       ¦   Clipboard_8hpp_source.html
+        ¦       ¦   Clock_8hpp.html
+        ¦       ¦   Clock_8hpp_source.html
+        ¦       ¦   closed.png
+        ¦       ¦   Color_8hpp.html
+        ¦       ¦   Color_8hpp_source.html
+        ¦       ¦   Config_8hpp.html
+        ¦       ¦   Config_8hpp_source.html
+        ¦       ¦   ContextSettings_8hpp.html
+        ¦       ¦   ContextSettings_8hpp_source.html
+        ¦       ¦   Context_8hpp.html
+        ¦       ¦   Context_8hpp_source.html
+        ¦       ¦   ConvexShape_8hpp.html
+        ¦       ¦   ConvexShape_8hpp_source.html
+        ¦       ¦   cookie.js
+        ¦       ¦   CoordinateType_8hpp.html
+        ¦       ¦   CoordinateType_8hpp_source.html
+        ¦       ¦   Cursor_8hpp.html
+        ¦       ¦   Cursor_8hpp_source.html
+        ¦       ¦   dir_5cf786e58cbf7297a26339ae6e44357c.html
+        ¦       ¦   dir_83d50c0b1f1eceb6f182949162e90861.html
+        ¦       ¦   dir_89e9fb32471ae291b179a889144513db.html
+        ¦       ¦   dir_c0a853e81d6f1c1f0a3eb7a27dc24256.html
+        ¦       ¦   dir_d44c64559bbebec7f509842c48db8b23.html
+        ¦       ¦   dir_dd49ddb3ba8035e4a328f8c5f31cda7e.html
+        ¦       ¦   dir_e68e8157741866f444e17edd764ebbae.html
+        ¦       ¦   dir_e71ec51a9abd604c65f6abb639f6ea75.html
+        ¦       ¦   doc.svg
+        ¦       ¦   docd.svg
+        ¦       ¦   doxygen.css
+        ¦       ¦   doxygen.svg
+        ¦       ¦   doxygen_crawl.html
+        ¦       ¦   Drawable_8hpp.html
+        ¦       ¦   Drawable_8hpp_source.html
+        ¦       ¦   dynsections.js
+        ¦       ¦   Err_8hpp.html
+        ¦       ¦   Err_8hpp_source.html
+        ¦       ¦   Event_8hpp.html
+        ¦       ¦   Event_8hpp_source.html
+        ¦       ¦   Exception_8hpp.html
+        ¦       ¦   Exception_8hpp_source.html
+        ¦       ¦   FileInputStream_8hpp.html
+        ¦       ¦   FileInputStream_8hpp_source.html
+        ¦       ¦   files.html
+        ¦       ¦   folderclosed.svg
+        ¦       ¦   folderclosedd.svg
+        ¦       ¦   folderopen.svg
+        ¦       ¦   folderopend.svg
+        ¦       ¦   Font_8hpp.html
+        ¦       ¦   Font_8hpp_source.html
+        ¦       ¦   Ftp_8hpp.html
+        ¦       ¦   Ftp_8hpp_source.html
+        ¦       ¦   functions.html
+        ¦       ¦   functions_b.html
+        ¦       ¦   functions_c.html
+        ¦       ¦   functions_d.html
+        ¦       ¦   functions_e.html
+        ¦       ¦   functions_enum.html
+        ¦       ¦   functions_eval.html
+        ¦       ¦   functions_f.html
+        ¦       ¦   functions_func.html
+        ¦       ¦   functions_func_b.html
+        ¦       ¦   functions_func_c.html
+        ¦       ¦   functions_func_d.html
+        ¦       ¦   functions_func_e.html
+        ¦       ¦   functions_func_f.html
+        ¦       ¦   functions_func_g.html
+        ¦       ¦   functions_func_h.html
+        ¦       ¦   functions_func_i.html
+        ¦       ¦   functions_func_k.html
+        ¦       ¦   functions_func_l.html
+        ¦       ¦   functions_func_m.html
+        ¦       ¦   functions_func_n.html
+        ¦       ¦   functions_func_o.html
+        ¦       ¦   functions_func_p.html
+        ¦       ¦   functions_func_r.html
+        ¦       ¦   functions_func_s.html
+        ¦       ¦   functions_func_t.html
+        ¦       ¦   functions_func_u.html
+        ¦       ¦   functions_func_v.html
+        ¦       ¦   functions_func_w.html
+        ¦       ¦   functions_func_z.html
+        ¦       ¦   functions_func_~.html
+        ¦       ¦   functions_g.html
+        ¦       ¦   functions_h.html
+        ¦       ¦   functions_i.html
+        ¦       ¦   functions_j.html
+        ¦       ¦   functions_k.html
+        ¦       ¦   functions_l.html
+        ¦       ¦   functions_m.html
+        ¦       ¦   functions_n.html
+        ¦       ¦   functions_o.html
+        ¦       ¦   functions_p.html
+        ¦       ¦   functions_r.html
+        ¦       ¦   functions_rela.html
+        ¦       ¦   functions_s.html
+        ¦       ¦   functions_t.html
+        ¦       ¦   functions_type.html
+        ¦       ¦   functions_u.html
+        ¦       ¦   functions_v.html
+        ¦       ¦   functions_vars.html
+        ¦       ¦   functions_w.html
+        ¦       ¦   functions_x.html
+        ¦       ¦   functions_y.html
+        ¦       ¦   functions_z.html
+        ¦       ¦   functions_~.html
+        ¦       ¦   globals.html
+        ¦       ¦   globals_defs.html
+        ¦       ¦   globals_type.html
+        ¦       ¦   GlResource_8hpp.html
+        ¦       ¦   GlResource_8hpp_source.html
+        ¦       ¦   Glsl_8hpp.html
+        ¦       ¦   Glsl_8hpp_source.html
+        ¦       ¦   Glyph_8hpp.html
+        ¦       ¦   Glyph_8hpp_source.html
+        ¦       ¦   GpuPreference_8hpp.html
+        ¦       ¦   GpuPreference_8hpp_source.html
+        ¦       ¦   Graphics_2Export_8hpp.html
+        ¦       ¦   Graphics_2Export_8hpp_source.html
+        ¦       ¦   Graphics_8hpp.html
+        ¦       ¦   Graphics_8hpp_source.html
+        ¦       ¦   group__audio.html
+        ¦       ¦   group__graphics.html
+        ¦       ¦   group__network.html
+        ¦       ¦   group__system.html
+        ¦       ¦   group__window.html
+        ¦       ¦   hierarchy.html
+        ¦       ¦   Http_8hpp.html
+        ¦       ¦   Http_8hpp_source.html
+        ¦       ¦   Image_8hpp.html
+        ¦       ¦   Image_8hpp_source.html
+        ¦       ¦   index.html
+        ¦       ¦   InputSoundFile_8hpp.html
+        ¦       ¦   InputSoundFile_8hpp_source.html
+        ¦       ¦   InputStream_8hpp.html
+        ¦       ¦   InputStream_8hpp_source.html
+        ¦       ¦   IpAddress_8hpp.html
+        ¦       ¦   IpAddress_8hpp_source.html
+        ¦       ¦   Joystick_8hpp.html
+        ¦       ¦   Joystick_8hpp_source.html
+        ¦       ¦   jquery.js
+        ¦       ¦   Keyboard_8hpp.html
+        ¦       ¦   Keyboard_8hpp_source.html
+        ¦       ¦   Listener_8hpp.html
+        ¦       ¦   Listener_8hpp_source.html
+        ¦       ¦   mainpage_8hpp.html
+        ¦       ¦   mainpage_8hpp_source.html
+        ¦       ¦   Main_8hpp.html
+        ¦       ¦   Main_8hpp_source.html
+        ¦       ¦   MemoryInputStream_8hpp.html
+        ¦       ¦   MemoryInputStream_8hpp_source.html
+        ¦       ¦   menudata.js
+        ¦       ¦   minus.svg
+        ¦       ¦   minusd.svg
+        ¦       ¦   Mouse_8hpp.html
+        ¦       ¦   Mouse_8hpp_source.html
+        ¦       ¦   Music_8hpp.html
+        ¦       ¦   Music_8hpp_source.html
+        ¦       ¦   namespacemembers.html
+        ¦       ¦   namespacemembers_enum.html
+        ¦       ¦   namespacemembers_eval.html
+        ¦       ¦   namespacemembers_func.html
+        ¦       ¦   namespacemembers_type.html
+        ¦       ¦   namespacemembers_vars.html
+        ¦       ¦   namespaces.html
+        ¦       ¦   namespacesf.html
+        ¦       ¦   namespacesf_1_1Clipboard.html
+        ¦       ¦   namespacesf_1_1Glsl.html
+        ¦       ¦   namespacesf_1_1Joystick.html
+        ¦       ¦   namespacesf_1_1Keyboard.html
+        ¦       ¦   namespacesf_1_1Listener.html
+        ¦       ¦   namespacesf_1_1Literals.html
+        ¦       ¦   namespacesf_1_1Mouse.html
+        ¦       ¦   namespacesf_1_1PlaybackDevice.html
+        ¦       ¦   namespacesf_1_1Sensor.html
+        ¦       ¦   namespacesf_1_1Style.html
+        ¦       ¦   namespacesf_1_1Touch.html
+        ¦       ¦   namespacesf_1_1Vulkan.html
+        ¦       ¦   NativeActivity_8hpp.html
+        ¦       ¦   NativeActivity_8hpp_source.html
+        ¦       ¦   navtree.css
+        ¦       ¦   nav_f.png
+        ¦       ¦   nav_fd.png
+        ¦       ¦   nav_g.png
+        ¦       ¦   nav_h.png
+        ¦       ¦   nav_hd.png
+        ¦       ¦   Network_2Export_8hpp.html
+        ¦       ¦   Network_2Export_8hpp_source.html
+        ¦       ¦   Network_8hpp.html
+        ¦       ¦   Network_8hpp_source.html
+        ¦       ¦   open.png
+        ¦       ¦   OpenGL_8hpp.html
+        ¦       ¦   OpenGL_8hpp_source.html
+        ¦       ¦   OutputSoundFile_8hpp.html
+        ¦       ¦   OutputSoundFile_8hpp_source.html
+        ¦       ¦   Packet_8hpp.html
+        ¦       ¦   Packet_8hpp_source.html
+        ¦       ¦   PlaybackDevice_8hpp.html
+        ¦       ¦   PlaybackDevice_8hpp_source.html
+        ¦       ¦   plus.svg
+        ¦       ¦   plusd.svg
+        ¦       ¦   PrimitiveType_8hpp.html
+        ¦       ¦   PrimitiveType_8hpp_source.html
+        ¦       ¦   RectangleShape_8hpp.html
+        ¦       ¦   RectangleShape_8hpp_source.html
+        ¦       ¦   Rect_8hpp.html
+        ¦       ¦   Rect_8hpp_source.html
+        ¦       ¦   RenderStates_8hpp.html
+        ¦       ¦   RenderStates_8hpp_source.html
+        ¦       ¦   RenderTarget_8hpp.html
+        ¦       ¦   RenderTarget_8hpp_source.html
+        ¦       ¦   RenderTexture_8hpp.html
+        ¦       ¦   RenderTexture_8hpp_source.html
+        ¦       ¦   RenderWindow_8hpp.html
+        ¦       ¦   RenderWindow_8hpp_source.html
+        ¦       ¦   resize.js
+        ¦       ¦   searchOverrides.css
+        ¦       ¦   Sensor_8hpp.html
+        ¦       ¦   Sensor_8hpp_source.html
+        ¦       ¦   Shader_8hpp.html
+        ¦       ¦   Shader_8hpp_source.html
+        ¦       ¦   Shape_8hpp.html
+        ¦       ¦   Shape_8hpp_source.html
+        ¦       ¦   Sleep_8hpp.html
+        ¦       ¦   Sleep_8hpp_source.html
+        ¦       ¦   SocketHandle_8hpp.html
+        ¦       ¦   SocketHandle_8hpp_source.html
+        ¦       ¦   SocketSelector_8hpp.html
+        ¦       ¦   SocketSelector_8hpp_source.html
+        ¦       ¦   Socket_8hpp.html
+        ¦       ¦   Socket_8hpp_source.html
+        ¦       ¦   SoundBufferRecorder_8hpp.html
+        ¦       ¦   SoundBufferRecorder_8hpp_source.html
+        ¦       ¦   SoundBuffer_8hpp.html
+        ¦       ¦   SoundBuffer_8hpp_source.html
+        ¦       ¦   SoundChannel_8hpp.html
+        ¦       ¦   SoundChannel_8hpp_source.html
+        ¦       ¦   SoundFileFactory_8hpp.html
+        ¦       ¦   SoundFileFactory_8hpp_source.html
+        ¦       ¦   SoundFileReader_8hpp.html
+        ¦       ¦   SoundFileReader_8hpp_source.html
+        ¦       ¦   SoundFileWriter_8hpp.html
+        ¦       ¦   SoundFileWriter_8hpp_source.html
+        ¦       ¦   SoundRecorder_8hpp.html
+        ¦       ¦   SoundRecorder_8hpp_source.html
+        ¦       ¦   SoundSource_8hpp.html
+        ¦       ¦   SoundSource_8hpp_source.html
+        ¦       ¦   SoundStream_8hpp.html
+        ¦       ¦   SoundStream_8hpp_source.html
+        ¦       ¦   Sound_8hpp.html
+        ¦       ¦   Sound_8hpp_source.html
+        ¦       ¦   splitbar.png
+        ¦       ¦   splitbard.png
+        ¦       ¦   Sprite_8hpp.html
+        ¦       ¦   Sprite_8hpp_source.html
+        ¦       ¦   StencilMode_8hpp.html
+        ¦       ¦   StencilMode_8hpp_source.html
+        ¦       ¦   String_8hpp.html
+        ¦       ¦   String_8hpp_source.html
+        ¦       ¦   structsf_1_1BlendMode-members.html
+        ¦       ¦   structsf_1_1BlendMode.html
+        ¦       ¦   structsf_1_1ContextSettings-members.html
+        ¦       ¦   structsf_1_1ContextSettings.html
+        ¦       ¦   structsf_1_1Event_1_1Closed.html
+        ¦       ¦   structsf_1_1Event_1_1FocusGained.html
+        ¦       ¦   structsf_1_1Event_1_1FocusLost.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickButtonPressed-members.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickButtonPressed.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickButtonReleased-members.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickButtonReleased.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickConnected-members.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickConnected.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickDisconnected-members.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickDisconnected.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickMoved-members.html
+        ¦       ¦   structsf_1_1Event_1_1JoystickMoved.html
+        ¦       ¦   structsf_1_1Event_1_1KeyPressed-members.html
+        ¦       ¦   structsf_1_1Event_1_1KeyPressed.html
+        ¦       ¦   structsf_1_1Event_1_1KeyReleased-members.html
+        ¦       ¦   structsf_1_1Event_1_1KeyReleased.html
+        ¦       ¦   structsf_1_1Event_1_1MouseButtonPressed-members.html
+        ¦       ¦   structsf_1_1Event_1_1MouseButtonPressed.html
+        ¦       ¦   structsf_1_1Event_1_1MouseButtonReleased-members.html
+        ¦       ¦   structsf_1_1Event_1_1MouseButtonReleased.html
+        ¦       ¦   structsf_1_1Event_1_1MouseEntered.html
+        ¦       ¦   structsf_1_1Event_1_1MouseLeft.html
+        ¦       ¦   structsf_1_1Event_1_1MouseMoved-members.html
+        ¦       ¦   structsf_1_1Event_1_1MouseMoved.html
+        ¦       ¦   structsf_1_1Event_1_1MouseMovedRaw-members.html
+        ¦       ¦   structsf_1_1Event_1_1MouseMovedRaw.html
+        ¦       ¦   structsf_1_1Event_1_1MouseWheelScrolled-members.html
+        ¦       ¦   structsf_1_1Event_1_1MouseWheelScrolled.html
+        ¦       ¦   structsf_1_1Event_1_1Resized-members.html
+        ¦       ¦   structsf_1_1Event_1_1Resized.html
+        ¦       ¦   structsf_1_1Event_1_1SensorChanged-members.html
+        ¦       ¦   structsf_1_1Event_1_1SensorChanged.html
+        ¦       ¦   structsf_1_1Event_1_1TextEntered-members.html
+        ¦       ¦   structsf_1_1Event_1_1TextEntered.html
+        ¦       ¦   structsf_1_1Event_1_1TouchBegan-members.html
+        ¦       ¦   structsf_1_1Event_1_1TouchBegan.html
+        ¦       ¦   structsf_1_1Event_1_1TouchEnded-members.html
+        ¦       ¦   structsf_1_1Event_1_1TouchEnded.html
+        ¦       ¦   structsf_1_1Event_1_1TouchMoved-members.html
+        ¦       ¦   structsf_1_1Event_1_1TouchMoved.html
+        ¦       ¦   structsf_1_1Font_1_1Info-members.html
+        ¦       ¦   structsf_1_1Font_1_1Info.html
+        ¦       ¦   structsf_1_1Glyph-members.html
+        ¦       ¦   structsf_1_1Glyph.html
+        ¦       ¦   structsf_1_1Joystick_1_1Identification-members.html
+        ¦       ¦   structsf_1_1Joystick_1_1Identification.html
+        ¦       ¦   structsf_1_1Listener_1_1Cone-members.html
+        ¦       ¦   structsf_1_1Listener_1_1Cone.html
+        ¦       ¦   structsf_1_1Music_1_1Span-members.html
+        ¦       ¦   structsf_1_1Music_1_1Span.html
+        ¦       ¦   structsf_1_1RenderStates-members.html
+        ¦       ¦   structsf_1_1RenderStates.html
+        ¦       ¦   structsf_1_1Shader_1_1CurrentTextureType.html
+        ¦       ¦   structsf_1_1SoundFileReader_1_1Info-members.html
+        ¦       ¦   structsf_1_1SoundFileReader_1_1Info.html
+        ¦       ¦   structsf_1_1SoundSource_1_1Cone-members.html
+        ¦       ¦   structsf_1_1SoundSource_1_1Cone.html
+        ¦       ¦   structsf_1_1SoundStream_1_1Chunk-members.html
+        ¦       ¦   structsf_1_1SoundStream_1_1Chunk.html
+        ¦       ¦   structsf_1_1StencilMode-members.html
+        ¦       ¦   structsf_1_1StencilMode.html
+        ¦       ¦   structsf_1_1StencilValue-members.html
+        ¦       ¦   structsf_1_1StencilValue.html
+        ¦       ¦   structsf_1_1SuspendAwareClock-members.html
+        ¦       ¦   structsf_1_1SuspendAwareClock.html
+        ¦       ¦   structsf_1_1U8StringCharTraits-members.html
+        ¦       ¦   structsf_1_1U8StringCharTraits.html
+        ¦       ¦   structsf_1_1Vertex-members.html
+        ¦       ¦   structsf_1_1Vertex.html
+        ¦       ¦   SuspendAwareClock_8hpp.html
+        ¦       ¦   SuspendAwareClock_8hpp_source.html
+        ¦       ¦   sync_off.png
+        ¦       ¦   sync_on.png
+        ¦       ¦   System_2Export_8hpp.html
+        ¦       ¦   System_2Export_8hpp_source.html
+        ¦       ¦   System_8hpp.html
+        ¦       ¦   System_8hpp_source.html
+        ¦       ¦   tabs.css
+        ¦       ¦   tab_a.png
+        ¦       ¦   tab_ad.png
+        ¦       ¦   tab_b.png
+        ¦       ¦   tab_bd.png
+        ¦       ¦   tab_h.png
+        ¦       ¦   tab_hd.png
+        ¦       ¦   tab_s.png
+        ¦       ¦   tab_sd.png
+        ¦       ¦   TcpListener_8hpp.html
+        ¦       ¦   TcpListener_8hpp_source.html
+        ¦       ¦   TcpSocket_8hpp.html
+        ¦       ¦   TcpSocket_8hpp_source.html
+        ¦       ¦   Texture_8hpp.html
+        ¦       ¦   Texture_8hpp_source.html
+        ¦       ¦   Text_8hpp.html
+        ¦       ¦   Text_8hpp_source.html
+        ¦       ¦   Time_8hpp.html
+        ¦       ¦   Time_8hpp_source.html
+        ¦       ¦   topics.html
+        ¦       ¦   Touch_8hpp.html
+        ¦       ¦   Touch_8hpp_source.html
+        ¦       ¦   Transformable_8hpp.html
+        ¦       ¦   Transformable_8hpp_source.html
+        ¦       ¦   Transform_8hpp.html
+        ¦       ¦   Transform_8hpp_source.html
+        ¦       ¦   UdpSocket_8hpp.html
+        ¦       ¦   UdpSocket_8hpp_source.html
+        ¦       ¦   Utf_8hpp.html
+        ¦       ¦   Utf_8hpp_source.html
+        ¦       ¦   Vector2_8hpp.html
+        ¦       ¦   Vector2_8hpp_source.html
+        ¦       ¦   Vector3_8hpp.html
+        ¦       ¦   Vector3_8hpp_source.html
+        ¦       ¦   VertexArray_8hpp.html
+        ¦       ¦   VertexArray_8hpp_source.html
+        ¦       ¦   VertexBuffer_8hpp.html
+        ¦       ¦   VertexBuffer_8hpp_source.html
+        ¦       ¦   Vertex_8hpp.html
+        ¦       ¦   Vertex_8hpp_source.html
+        ¦       ¦   VideoMode_8hpp.html
+        ¦       ¦   VideoMode_8hpp_source.html
+        ¦       ¦   View_8hpp.html
+        ¦       ¦   View_8hpp_source.html
+        ¦       ¦   Vulkan_8hpp.html
+        ¦       ¦   Vulkan_8hpp_source.html
+        ¦       ¦   WindowBase_8hpp.html
+        ¦       ¦   WindowBase_8hpp_source.html
+        ¦       ¦   WindowEnums_8hpp.html
+        ¦       ¦   WindowEnums_8hpp_source.html
+        ¦       ¦   WindowHandle_8hpp.html
+        ¦       ¦   WindowHandle_8hpp_source.html
+        ¦       ¦   Window_2Export_8hpp.html
+        ¦       ¦   Window_2Export_8hpp_source.html
+        ¦       ¦   Window_2Window_8hpp.html
+        ¦       ¦   Window_2Window_8hpp_source.html
+        ¦       ¦   Window_8hpp.html
+        ¦       ¦   Window_8hpp_source.html
+        ¦       ¦   
+        ¦       +---search
+        ¦               all_0.js
+        ¦               all_1.js
+        ¦               all_10.js
+        ¦               all_11.js
+        ¦               all_12.js
+        ¦               all_13.js
+        ¦               all_14.js
+        ¦               all_15.js
+        ¦               all_16.js
+        ¦               all_17.js
+        ¦               all_18.js
+        ¦               all_19.js
+        ¦               all_1a.js
+        ¦               all_2.js
+        ¦               all_3.js
+        ¦               all_4.js
+        ¦               all_5.js
+        ¦               all_6.js
+        ¦               all_7.js
+        ¦               all_8.js
+        ¦               all_9.js
+        ¦               all_a.js
+        ¦               all_b.js
+        ¦               all_c.js
+        ¦               all_d.js
+        ¦               all_e.js
+        ¦               all_f.js
+        ¦               classes_0.js
+        ¦               classes_1.js
+        ¦               classes_10.js
+        ¦               classes_11.js
+        ¦               classes_12.js
+        ¦               classes_13.js
+        ¦               classes_14.js
+        ¦               classes_2.js
+        ¦               classes_3.js
+        ¦               classes_4.js
+        ¦               classes_5.js
+        ¦               classes_6.js
+        ¦               classes_7.js
+        ¦               classes_8.js
+        ¦               classes_9.js
+        ¦               classes_a.js
+        ¦               classes_b.js
+        ¦               classes_c.js
+        ¦               classes_d.js
+        ¦               classes_e.js
+        ¦               classes_f.js
+        ¦               close.svg
+        ¦               defines_0.js
+        ¦               enums_0.js
+        ¦               enums_1.js
+        ¦               enums_2.js
+        ¦               enums_3.js
+        ¦               enums_4.js
+        ¦               enums_5.js
+        ¦               enums_6.js
+        ¦               enums_7.js
+        ¦               enums_8.js
+        ¦               enums_9.js
+        ¦               enums_a.js
+        ¦               enums_b.js
+        ¦               enumvalues_0.js
+        ¦               enumvalues_1.js
+        ¦               enumvalues_10.js
+        ¦               enumvalues_11.js
+        ¦               enumvalues_12.js
+        ¦               enumvalues_13.js
+        ¦               enumvalues_14.js
+        ¦               enumvalues_15.js
+        ¦               enumvalues_16.js
+        ¦               enumvalues_17.js
+        ¦               enumvalues_18.js
+        ¦               enumvalues_19.js
+        ¦               enumvalues_2.js
+        ¦               enumvalues_3.js
+        ¦               enumvalues_4.js
+        ¦               enumvalues_5.js
+        ¦               enumvalues_6.js
+        ¦               enumvalues_7.js
+        ¦               enumvalues_8.js
+        ¦               enumvalues_9.js
+        ¦               enumvalues_a.js
+        ¦               enumvalues_b.js
+        ¦               enumvalues_c.js
+        ¦               enumvalues_d.js
+        ¦               enumvalues_e.js
+        ¦               enumvalues_f.js
+        ¦               files_0.js
+        ¦               files_1.js
+        ¦               files_10.js
+        ¦               files_11.js
+        ¦               files_12.js
+        ¦               files_13.js
+        ¦               files_14.js
+        ¦               files_15.js
+        ¦               files_2.js
+        ¦               files_3.js
+        ¦               files_4.js
+        ¦               files_5.js
+        ¦               files_6.js
+        ¦               files_7.js
+        ¦               files_8.js
+        ¦               files_9.js
+        ¦               files_a.js
+        ¦               files_b.js
+        ¦               files_c.js
+        ¦               files_d.js
+        ¦               files_e.js
+        ¦               files_f.js
+        ¦               functions_0.js
+        ¦               functions_1.js
+        ¦               functions_10.js
+        ¦               functions_11.js
+        ¦               functions_12.js
+        ¦               functions_13.js
+        ¦               functions_14.js
+        ¦               functions_15.js
+        ¦               functions_16.js
+        ¦               functions_2.js
+        ¦               functions_3.js
+        ¦               functions_4.js
+        ¦               functions_5.js
+        ¦               functions_6.js
+        ¦               functions_7.js
+        ¦               functions_8.js
+        ¦               functions_9.js
+        ¦               functions_a.js
+        ¦               functions_b.js
+        ¦               functions_c.js
+        ¦               functions_d.js
+        ¦               functions_e.js
+        ¦               functions_f.js
+        ¦               groups_0.js
+        ¦               groups_1.js
+        ¦               groups_2.js
+        ¦               groups_3.js
+        ¦               groups_4.js
+        ¦               groups_5.js
+        ¦               mag.svg
+        ¦               mag_d.svg
+        ¦               mag_sel.svg
+        ¦               mag_seld.svg
+        ¦               namespaces_0.js
+        ¦               pages_0.js
+        ¦               pages_1.js
+        ¦               related_0.js
+        ¦               related_1.js
+        ¦               related_2.js
+        ¦               related_3.js
+        ¦               related_4.js
+        ¦               related_5.js
+        ¦               related_6.js
+        ¦               related_7.js
+        ¦               search.css
+        ¦               search.js
+        ¦               searchdata.js
+        ¦               typedefs_0.js
+        ¦               typedefs_1.js
+        ¦               typedefs_2.js
+        ¦               typedefs_3.js
+        ¦               typedefs_4.js
+        ¦               typedefs_5.js
+        ¦               typedefs_6.js
+        ¦               typedefs_7.js
+        ¦               typedefs_8.js
+        ¦               typedefs_9.js
+        ¦               typedefs_a.js
+        ¦               typedefs_b.js
+        ¦               typedefs_c.js
+        ¦               typedefs_d.js
+        ¦               typedefs_e.js
+        ¦               typedefs_f.js
+        ¦               variables_0.js
+        ¦               variables_1.js
+        ¦               variables_10.js
+        ¦               variables_11.js
+        ¦               variables_12.js
+        ¦               variables_13.js
+        ¦               variables_14.js
+        ¦               variables_15.js
+        ¦               variables_16.js
+        ¦               variables_2.js
+        ¦               variables_3.js
+        ¦               variables_4.js
+        ¦               variables_5.js
+        ¦               variables_6.js
+        ¦               variables_7.js
+        ¦               variables_8.js
+        ¦               variables_9.js
+        ¦               variables_a.js
+        ¦               variables_b.js
+        ¦               variables_c.js
+        ¦               variables_d.js
+        ¦               variables_e.js
+        ¦               variables_f.js
+        ¦               
+        +---examples
+        ¦   ¦   asset_licenses.md
+        ¦   ¦   
+        ¦   +---assets
+        ¦   ¦       icon.icns
+        ¦   ¦       info.plist
+        ¦   ¦       LaunchScreen.storyboard
+        ¦   ¦       logo.png
+        ¦   ¦       
+        ¦   +---event_handling
+        ¦   ¦   ¦   EventHandling.cpp
+        ¦   ¦   ¦   event_handling.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---ftp
+        ¦   ¦       Ftp.cpp
+        ¦   ¦       ftp.exe
+        ¦   ¦       
+        ¦   +---island
+        ¦   ¦   ¦   Island.cpp
+        ¦   ¦   ¦   island.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           terrain.frag
+        ¦   ¦           terrain.vert
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---joystick
+        ¦   ¦   ¦   Joystick.cpp
+        ¦   ¦   ¦   joystick.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---keyboard
+        ¦   ¦   ¦   Keyboard.cpp
+        ¦   ¦   ¦   keyboard.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           error_005.ogg
+        ¦   ¦           mouseclick1.ogg
+        ¦   ¦           mouserelease1.ogg
+        ¦   ¦           Tuffy.ttf
+        ¦   ¦           
+        ¦   +---opengl
+        ¦   ¦   ¦   OpenGL.cpp
+        ¦   ¦   ¦   opengl.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           background.jpg
+        ¦   ¦           logo.png
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---raw_input
+        ¦   ¦   ¦   RawInput.cpp
+        ¦   ¦   ¦   raw_input.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---shader
+        ¦   ¦   ¦   Shader.cpp
+        ¦   ¦   ¦   shader.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           background.jpg
+        ¦   ¦           billboard.frag
+        ¦   ¦           billboard.geom
+        ¦   ¦           billboard.vert
+        ¦   ¦           blink.frag
+        ¦   ¦           blur.frag
+        ¦   ¦           devices.png
+        ¦   ¦           edge.frag
+        ¦   ¦           logo.png
+        ¦   ¦           pixelate.frag
+        ¦   ¦           sfml.png
+        ¦   ¦           storm.vert
+        ¦   ¦           text-background.png
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           wave.vert
+        ¦   ¦           
+        ¦   +---sockets
+        ¦   ¦       Sockets.cpp
+        ¦   ¦       sockets.exe
+        ¦   ¦       TCP.cpp
+        ¦   ¦       UDP.cpp
+        ¦   ¦       
+        ¦   +---sound
+        ¦   ¦   ¦   Sound.cpp
+        ¦   ¦   ¦   sound.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           ding.flac
+        ¦   ¦           ding.mp3
+        ¦   ¦           doodle_pop.ogg
+        ¦   ¦           killdeer.wav
+        ¦   ¦           
+        ¦   +---sound_capture
+        ¦   ¦       sound-capture.exe
+        ¦   ¦       SoundCapture.cpp
+        ¦   ¦       
+        ¦   +---sound_effects
+        ¦   ¦   ¦   sound-effects.exe
+        ¦   ¦   ¦   SoundEffects.cpp
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           doodle_pop.ogg
+        ¦   ¦           text-background.png
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---stencil
+        ¦   ¦       Stencil.cpp
+        ¦   ¦       stencil.exe
+        ¦   ¦       
+        ¦   +---tennis
+        ¦   ¦   ¦   Tennis.cpp
+        ¦   ¦   ¦   tennis.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           ball.wav
+        ¦   ¦           sfml_logo.png
+        ¦   ¦           tuffy.ttf
+        ¦   ¦           
+        ¦   +---voip
+        ¦   ¦       Client.cpp
+        ¦   ¦       Server.cpp
+        ¦   ¦       VoIP.cpp
+        ¦   ¦       voip.exe
+        ¦   ¦       
+        ¦   +---vulkan
+        ¦   ¦   ¦   Vulkan.cpp
+        ¦   ¦   ¦   vulkan.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           logo.png
+        ¦   ¦           shader.frag
+        ¦   ¦           shader.frag.spv
+        ¦   ¦           shader.vert
+        ¦   ¦           shader.vert.spv
+        ¦   ¦           
+        ¦   +---win32
+        ¦   ¦   ¦   Win32.cpp
+        ¦   ¦   ¦   win32.exe
+        ¦   ¦   ¦   
+        ¦   ¦   +---resources
+        ¦   ¦           image1.jpg
+        ¦   ¦           image2.jpg
+        ¦   ¦           
+        ¦   +---window
+        ¦           Window.cpp
+        ¦           window.exe
+        ¦           
+        +---include
+        ¦   +---SFML
+        ¦       ¦   Audio.hpp
+        ¦       ¦   Config.hpp
+        ¦       ¦   GpuPreference.hpp
+        ¦       ¦   Graphics.hpp
+        ¦       ¦   Main.hpp
+        ¦       ¦   Network.hpp
+        ¦       ¦   OpenGL.hpp
+        ¦       ¦   System.hpp
+        ¦       ¦   Window.hpp
+        ¦       ¦   
+        ¦       +---Audio
+        ¦       ¦       AudioResource.hpp
+        ¦       ¦       Export.hpp
+        ¦       ¦       InputSoundFile.hpp
+        ¦       ¦       Listener.hpp
+        ¦       ¦       Music.hpp
+        ¦       ¦       OutputSoundFile.hpp
+        ¦       ¦       PlaybackDevice.hpp
+        ¦       ¦       Sound.hpp
+        ¦       ¦       SoundBuffer.hpp
+        ¦       ¦       SoundBufferRecorder.hpp
+        ¦       ¦       SoundChannel.hpp
+        ¦       ¦       SoundFileFactory.hpp
+        ¦       ¦       SoundFileFactory.inl
+        ¦       ¦       SoundFileReader.hpp
+        ¦       ¦       SoundFileWriter.hpp
+        ¦       ¦       SoundRecorder.hpp
+        ¦       ¦       SoundSource.hpp
+        ¦       ¦       SoundStream.hpp
+        ¦       ¦       
+        ¦       +---Graphics
+        ¦       ¦       BlendMode.hpp
+        ¦       ¦       CircleShape.hpp
+        ¦       ¦       Color.hpp
+        ¦       ¦       Color.inl
+        ¦       ¦       ConvexShape.hpp
+        ¦       ¦       CoordinateType.hpp
+        ¦       ¦       Drawable.hpp
+        ¦       ¦       Export.hpp
+        ¦       ¦       Font.hpp
+        ¦       ¦       Glsl.hpp
+        ¦       ¦       Glsl.inl
+        ¦       ¦       Glyph.hpp
+        ¦       ¦       Image.hpp
+        ¦       ¦       PrimitiveType.hpp
+        ¦       ¦       Rect.hpp
+        ¦       ¦       Rect.inl
+        ¦       ¦       RectangleShape.hpp
+        ¦       ¦       RenderStates.hpp
+        ¦       ¦       RenderTarget.hpp
+        ¦       ¦       RenderTexture.hpp
+        ¦       ¦       RenderWindow.hpp
+        ¦       ¦       Shader.hpp
+        ¦       ¦       Shape.hpp
+        ¦       ¦       Sprite.hpp
+        ¦       ¦       StencilMode.hpp
+        ¦       ¦       Text.hpp
+        ¦       ¦       Texture.hpp
+        ¦       ¦       Transform.hpp
+        ¦       ¦       Transform.inl
+        ¦       ¦       Transformable.hpp
+        ¦       ¦       Vertex.hpp
+        ¦       ¦       VertexArray.hpp
+        ¦       ¦       VertexBuffer.hpp
+        ¦       ¦       View.hpp
+        ¦       ¦       
+        ¦       +---Network
+        ¦       ¦       Export.hpp
+        ¦       ¦       Ftp.hpp
+        ¦       ¦       Http.hpp
+        ¦       ¦       IpAddress.hpp
+        ¦       ¦       Packet.hpp
+        ¦       ¦       Socket.hpp
+        ¦       ¦       SocketHandle.hpp
+        ¦       ¦       SocketSelector.hpp
+        ¦       ¦       TcpListener.hpp
+        ¦       ¦       TcpSocket.hpp
+        ¦       ¦       UdpSocket.hpp
+        ¦       ¦       
+        ¦       +---System
+        ¦       ¦       Angle.hpp
+        ¦       ¦       Angle.inl
+        ¦       ¦       Clock.hpp
+        ¦       ¦       Err.hpp
+        ¦       ¦       Exception.hpp
+        ¦       ¦       Export.hpp
+        ¦       ¦       FileInputStream.hpp
+        ¦       ¦       InputStream.hpp
+        ¦       ¦       MemoryInputStream.hpp
+        ¦       ¦       NativeActivity.hpp
+        ¦       ¦       Sleep.hpp
+        ¦       ¦       String.hpp
+        ¦       ¦       String.inl
+        ¦       ¦       SuspendAwareClock.hpp
+        ¦       ¦       Time.hpp
+        ¦       ¦       Time.inl
+        ¦       ¦       Utf.hpp
+        ¦       ¦       Utf.inl
+        ¦       ¦       Vector2.hpp
+        ¦       ¦       Vector2.inl
+        ¦       ¦       Vector3.hpp
+        ¦       ¦       Vector3.inl
+        ¦       ¦       
+        ¦       +---Window
+        ¦               Clipboard.hpp
+        ¦               Context.hpp
+        ¦               ContextSettings.hpp
+        ¦               Cursor.hpp
+        ¦               Event.hpp
+        ¦               Event.inl
+        ¦               Export.hpp
+        ¦               GlResource.hpp
+        ¦               Joystick.hpp
+        ¦               Keyboard.hpp
+        ¦               Mouse.hpp
+        ¦               Sensor.hpp
+        ¦               Touch.hpp
+        ¦               VideoMode.hpp
+        ¦               Vulkan.hpp
+        ¦               Window.hpp
+        ¦               WindowBase.hpp
+        ¦               WindowBase.inl
+        ¦               WindowEnums.hpp
+        ¦               WindowHandle.hpp
+        ¦               
+        +---lib
+            ¦   libFLAC.a
+            ¦   libFLACd.a
+            ¦   libfreetype.a
+            ¦   libfreetyped.a
+            ¦   libogg.a
+            ¦   liboggd.a
+            ¦   libsfml-audio-d.a
+            ¦   libsfml-audio-s-d.a
+            ¦   libsfml-audio-s.a
+            ¦   libsfml-audio.a
+            ¦   libsfml-graphics-d.a
+            ¦   libsfml-graphics-s-d.a
+            ¦   libsfml-graphics-s.a
+            ¦   libsfml-graphics.a
+            ¦   libsfml-main-s-d.a
+            ¦   libsfml-main-s.a
+            ¦   libsfml-network-d.a
+            ¦   libsfml-network-s-d.a
+            ¦   libsfml-network-s.a
+            ¦   libsfml-network.a
+            ¦   libsfml-system-d.a
+            ¦   libsfml-system-s-d.a
+            ¦   libsfml-system-s.a
+            ¦   libsfml-system.a
+            ¦   libsfml-window-d.a
+            ¦   libsfml-window-s-d.a
+            ¦   libsfml-window-s.a
+            ¦   libsfml-window.a
+            ¦   libvorbis.a
+            ¦   libvorbisd.a
+            ¦   libvorbisenc.a
+            ¦   libvorbisencd.a
+            ¦   libvorbisfile.a
+            ¦   libvorbisfiled.a
+            ¦   
+            +---cmake
+                +---FLAC
+                ¦       flac-config-version.cmake
+                ¦       flac-config.cmake
+                ¦       targets-debug.cmake
+                ¦       targets-release.cmake
+                ¦       targets.cmake
+                ¦       
+                +---freetype
+                ¦       freetype-config-debug.cmake
+                ¦       freetype-config-release.cmake
+                ¦       freetype-config-version.cmake
+                ¦       freetype-config.cmake
+                ¦       
+                +---Ogg
+                ¦       OggConfig.cmake
+                ¦       OggConfigVersion.cmake
+                ¦       OggTargets-debug.cmake
+                ¦       OggTargets-release.cmake
+                ¦       OggTargets.cmake
+                ¦       
+                +---SFML
+                ¦       FindDRM.cmake
+                ¦       FindEGL.cmake
+                ¦       FindFLAC.cmake
+                ¦       FindFreetype.cmake
+                ¦       FindGBM.cmake
+                ¦       FindGLES.cmake
+                ¦       FindUDev.cmake
+                ¦       FindVorbis.cmake
+                ¦       SFMLAudioDependencies.cmake
+                ¦       SFMLAudioSharedTargets-debug.cmake
+                ¦       SFMLAudioSharedTargets-release.cmake
+                ¦       SFMLAudioSharedTargets.cmake
+                ¦       SFMLAudioStaticTargets-debug.cmake
+                ¦       SFMLAudioStaticTargets-release.cmake
+                ¦       SFMLAudioStaticTargets.cmake
+                ¦       SFMLConfig.cmake
+                ¦       SFMLConfigVersion.cmake
+                ¦       SFMLGraphicsDependencies.cmake
+                ¦       SFMLGraphicsSharedTargets-debug.cmake
+                ¦       SFMLGraphicsSharedTargets-release.cmake
+                ¦       SFMLGraphicsSharedTargets.cmake
+                ¦       SFMLGraphicsStaticTargets-debug.cmake
+                ¦       SFMLGraphicsStaticTargets-release.cmake
+                ¦       SFMLGraphicsStaticTargets.cmake
+                ¦       SFMLMainSharedTargets-debug.cmake
+                ¦       SFMLMainSharedTargets-release.cmake
+                ¦       SFMLMainSharedTargets.cmake
+                ¦       SFMLMainStaticTargets-debug.cmake
+                ¦       SFMLMainStaticTargets-release.cmake
+                ¦       SFMLMainStaticTargets.cmake
+                ¦       SFMLNetworkSharedTargets-debug.cmake
+                ¦       SFMLNetworkSharedTargets-release.cmake
+                ¦       SFMLNetworkSharedTargets.cmake
+                ¦       SFMLNetworkStaticTargets-debug.cmake
+                ¦       SFMLNetworkStaticTargets-release.cmake
+                ¦       SFMLNetworkStaticTargets.cmake
+                ¦       SFMLSystemDependencies.cmake
+                ¦       SFMLSystemSharedTargets-debug.cmake
+                ¦       SFMLSystemSharedTargets-release.cmake
+                ¦       SFMLSystemSharedTargets.cmake
+                ¦       SFMLSystemStaticTargets-debug.cmake
+                ¦       SFMLSystemStaticTargets-release.cmake
+                ¦       SFMLSystemStaticTargets.cmake
+                ¦       SFMLWindowDependencies.cmake
+                ¦       SFMLWindowSharedTargets-debug.cmake
+                ¦       SFMLWindowSharedTargets-release.cmake
+                ¦       SFMLWindowSharedTargets.cmake
+                ¦       SFMLWindowStaticTargets-debug.cmake
+                ¦       SFMLWindowStaticTargets-release.cmake
+                ¦       SFMLWindowStaticTargets.cmake
+                ¦       
+                +---Vorbis
+                        VorbisConfig.cmake
+                        VorbisConfigVersion.cmake
+                        VorbisTargets-debug.cmake
+                        VorbisTargets-release.cmake
+                        VorbisTargets.cmake
+                        

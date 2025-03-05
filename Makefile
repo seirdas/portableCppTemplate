@@ -10,22 +10,21 @@ OBJDIR = obj
 BINDIR = bin
 RESDIR = res
 
-OBJDIR_RELEASE = $(OBJDIR)\release
-OBJDIR_DEBUG = $(OBJDIR)\debug
-BINDIR_RELEASE = $(BINDIR)\release
-BINDIR_DEBUG = $(BINDIR)\debug
+OBJDIR_RELEASE = $(OBJDIR)/release
+OBJDIR_DEBUG = $(OBJDIR)/debug
+BINDIR_RELEASE = $(BINDIR)/release
+BINDIR_DEBUG = $(BINDIR)/debug
 
 # Parametros del compilador
 CC = "$(COMPILER_DIR)g++" -B"$(COMPILER_DIR)"
-CFLAGS = -Wall -Wextra -Isrc 
-LDFLAGS = -L "$(COMPILER_DIR)lib"
+CFLAGS = -Wall -Wextra 
+LDFLAGS = -L"$(COMPILER_DIR)lib"
 
-# Parametros de SFML
-SFML_CFLAGS 					:= -I$(wildcard include/SFML*/)
-SFML_RELEASE_STATIC_LDFLAGS 	:= -L$(wildcard lib/SFML*/*-s.a)
-SFML_DEBUG_DYNAMIC_LDFLAGS 		:= -L$(wildcard lib/SFML*/*d.a)
-SFML_DEBUG_STATIC_LDFLAGS 		:= -L$(wildcard lib/SFML*/*-s-d.a)
-SFML_RELEASE_DYNAMIC_LDFLAGS 	:= -L$(filter-out %d.a %-s.a %-s-d.a %cmake, $(wildcard lib/SFML*/*))
+# Parametros de linker SFML para librerías dinámicas
+SFML_CFLAGS 					:= -I$(wildcard dependencies/SFML*/SFML*/include)
+SFML_LIB 						:= $(wildcard dependencies/SFML*/SFML*/lib)
+SFML_RELEASE_DYNAMIC_LDFLAGS 	:= -L$(SFML_LIB) -lsfml-window 		-lsfml-graphics 	-lsfml-system 	-lsfml-audio 	-lsfml-network
+SFML_DEBUG_DYNAMIC_LDFLAGS 		:= -L$(SFML_LIB) -lsfml-window-d 	-lsfml-graphics-d 	-lsfml-system-d -lsfml-audio-d 	-lsfml-network-d
 
 # Comandos
 # Check for Windows
@@ -55,13 +54,6 @@ DEBUG_RES_OBJECTS := $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR_DEBUG)/%.res.o)
 # Comandos
 .PHONY: all clean debug release info
 
-info:
-	@echo # SFML_CFLAGS: $(SFML_CFLAGS)
-	@echo # SFML_RELEASE_DYNAMIC_LDFLAGS: $(SFML_RELEASE_DYNAMIC_LDFLAGS)
-	@echo # SFML_RELEASE_STATIC_LDFLAGS: $(SFML_RELEASE_STATIC_LDFLAGS)
-	@echo # SFML_DEBUG_DYNAMIC_LDFLAGS: $(SFML_DEBUG_DYNAMIC_LDFLAGS)
-	@echo # SFML_DEBUG_STATIC_LDFLAGS: $(SFML_DEBUG_STATIC_LDFLAGS)
-
 # Main Tasks
 all: release
 
@@ -77,7 +69,6 @@ $(OBJDIR_RELEASE) $(BINDIR_RELEASE) $(OBJDIR_DEBUG) $(BINDIR_DEBUG):
 # Link the object files to create the executable
 $(BINDIR_RELEASE)/$(TARGET): $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS)
 	@echo ------ Compiling started: $(TARGET) ------
-	@echo ------ Compiling started: $(TARGET) ------
 	$(CC) $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_RELEASE_DYNAMIC_LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo --- Compilation complete!
 
@@ -89,19 +80,19 @@ $(BINDIR_DEBUG)/$(TARGET): $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS)
 # Compile each .cpp file to an object file
 $(OBJDIR_RELEASE)/%.o: $(SRCDIR)/%.cpp | $(HEADERS)
 	@echo Compiling $@...
-	$(CC) -c $< -o $@ $(CFLAGS)
+	$(CC) -c $< -o $@ $(SFML_CFLAGS) $(CFLAGS) 
 
 $(OBJDIR_DEBUG)/%.o: $(SRCDIR)/%.cpp | $(HEADERS)
 	@echo Compiling $@...
-	$(CC) -c $< -o $@ $(CFLAGS)
+	$(CC) -c $< -o $@ $(SFML_CFLAGS) $(CFLAGS)
 
 # Compile the resource files
 $(OBJDIR_RELEASE)/%.res.o: $(RESDIR)/%.rc
-	@echo Compiling res file $@...
+	@echo Compiling release res file $@...
 	$(RC) $< -o $@
 
 $(OBJDIR_DEBUG)/%.res.o: $(RESDIR)/%.rc
-	@echo Compiling res file $@...
+	@echo Compiling debug res file $@...
 	$(RC) $< -o $@
 
 # Clean up generated files
@@ -109,3 +100,10 @@ clean:
 	@IF EXIST $(OBJDIR) $(RMDIR) $(OBJDIR)
 	@IF EXIST $(BINDIR_DEBUG) $(RMDIR) $(BINDIR_DEBUG)
 	@echo Clean complete!
+
+info:
+	@echo # SFML_CFLAGS: $(SFML_CFLAGS)
+	@echo # SFML_RELEASE_STATIC_LDFLAGS: $(SFML_RELEASE_STATIC_LDFLAGS)
+	@echo # SFML_DEBUG_DYNAMIC_LDFLAGS: $(SFML_DEBUG_DYNAMIC_LDFLAGS)
+	@echo # SFML_DEBUG_STATIC_LDFLAGS: $(SFML_DEBUG_STATIC_LDFLAGS)
+	@echo # SFML_RELEASE_DYNAMIC_LDFLAGS: $(SFML_RELEASE_DYNAMIC_LDFLAGS)
