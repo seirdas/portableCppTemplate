@@ -2,10 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile with make",
+            "label": "Release",
             "type": "shell",
             "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
             "args": [],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles the project in release and clean."
+        },
+        {
+            "label": "compile with make (release)",
+            "type": "shell",
+            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "args": [
+                "release"
+            ],
             "group": "build",
             "problemMatcher": [
                 "$gcc"

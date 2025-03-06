@@ -9,7 +9,7 @@
             "program": "${workspaceFolder}/bin/Release/${config:TARGET}.exe",
             "args": [],
             "externalConsole": false,
-            "preLaunchTask": "compile with make",
+            "preLaunchTask": "compile with make (release)",
             "miDebuggerPath": "${config:COMPILER_PATH}/bin/gdb.exe",
             "miDebuggerArgs": ""
         },
