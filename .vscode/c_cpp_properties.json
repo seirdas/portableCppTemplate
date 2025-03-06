@@ -1,14 +1,14 @@
 {
     "configurations": [
         {
-            "name": "Win",
+            "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${config:COMPILER_PATH}/lib"
             ],
             "compilerPath": "${config:COMPILER_PATH}/bin/g++.exe",
             "cStandard": "c23",
-            "cppStandard": "c++14",
+            "cppStandard": "c++17",
             "intelliSenseMode": "${default}",
             "configurationProvider": "ms-vscode.makefile-tools"
         }
