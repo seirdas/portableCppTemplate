@@ -24,10 +24,12 @@ LDFLAGS = -L"$(COMPILER_DIR)lib" -static-libgcc -static-libstdc++
 # Check for Windows
 ifeq ($(OS), Windows_NT)
     RMDIR 	:= rmdir /s /q
-	COPY 	:= copy
+    COPY 	:= copy
+    MKDIR 	:= mkdir
 else
     RMDIR 	:= rm -rf
-	COPY 	:= cp
+    COPY 	:= cp
+    MKDIR 	:= mkdir -p
 endif
 
 # Archivos de código (Carpeta /src)
@@ -65,50 +67,50 @@ SFML_DEBUG_DLLS 			:= $(foreach file, $(SFML_DLLS), $(if $(findstring -d-, $(fil
 
 ################################
 # Comandos
-.PHONY: all clean debug release info copy_dlls
+.PHONY: all clean debug release info
 
 # Main Tasks
 all: release
 
-release: $(OBJDIR_RELEASE) $(BINDIR_RELEASE) $(BINDIR_RELEASE)/$(TARGET) $(SFML_RELEASE_DLLS:%=$(BINDIR_RELEASE)/%)
+release: $(OBJDIR_RELEASE) $(BINDIR_RELEASE) $(SFML_RELEASE_DLLS) $(BINDIR_RELEASE)/$(TARGET)
 
 debug: CFLAGS += -g -O0
-debug: $(OBJDIR_DEBUG) $(BINDIR_DEBUG) $(BINDIR_DEBUG)/$(TARGET) $(SFML_DEBUG_DLLS:%=$(BINDIR_DEBUG)/%)
+debug: $(OBJDIR_DEBUG) $(BINDIR_DEBUG) $(SFML_DEBUG_DLLS) $(BINDIR_DEBUG)/$(TARGET)
 
 # Create directories
 $(OBJDIR_RELEASE) $(BINDIR_RELEASE) $(OBJDIR_DEBUG) $(BINDIR_DEBUG):
 	@mkdir "$@"
 
-# Link the object files to create the executable
-$(BINDIR_RELEASE)/$(TARGET): $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS) $(SFML_RELEASE_DLLS)
-	@echo ------ Compiling started: $(TARGET) ------
-	$(CC) $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_RELEASE_DYNAMIC_LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
-	@echo --- Compilation complete!
+# Copy dlls (tested on windows, could be better)
+$(SFML_DEBUG_DLLS):
+	@$(COPY) "$(subst /,\,$(SFML_BIN)/$@)" "$(subst /,\,$(BINDIR_DEBUG)/$@)"
+$(SFML_RELEASE_DLLS):
+	@$(COPY) "$(subst /,\,$(SFML_BIN)/$@)" "$(subst /,\,$(BINDIR_RELEASE)/$@)" 
 
+# Link the object files to create the executable
+$(BINDIR_RELEASE)/$(TARGET): $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS)
+	@echo ------ Release compiling started: $(TARGET) ------
+	$(CC) $(OBJS_RELEASE) $(RELEASE_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_RELEASE_DYNAMIC_LDFLAGS) \
+		-DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
+	@echo --- Release compilation complete!
 $(BINDIR_DEBUG)/$(TARGET): $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) $(SFML_DEBUG_DLLS)
-	@echo ------ Compiling started: $(TARGET) ------
-	$(CC) $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_DEBUG_DYNAMIC_LDFLAGS) -DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
+	@echo ------ Debug compiling started: $(TARGET) ------
+	$(CC) $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_DEBUG_DYNAMIC_LDFLAGS) \
+		-DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo --- Debug compilation complete!
 
 # Compile each .cpp file to an object file
 $(OBJDIR_RELEASE)/%.o: $(SRCDIR)/%.cpp | $(HEADERS)
 	@echo Compiling $@...
 	$(CC) -c $< -o $@ $(SFML_INCLUDE) $(CFLAGS)
-
 $(OBJDIR_DEBUG)/%.o: $(SRCDIR)/%.cpp | $(HEADERS)
 	@echo Compiling $@...
 	$(CC) -c $< -o $@ $(SFML_INCLUDE) $(CFLAGS)
-
-#copy dlls
-$(BINDIR_RELEASE)/%.dll: $(SFML_RELEASE_DLLS)/%.dll
-	@echo Copying $< to $@...
-	$(COPY) $< $@
 
 # Compile the resource files
 $(OBJDIR_RELEASE)/%.res.o: $(RESDIR)/%.rc
 	@echo Compiling release res file $@...
 	$(RC) $< -o $@
-
 $(OBJDIR_DEBUG)/%.res.o: $(RESDIR)/%.rc
 	@echo Compiling debug res file $@...
 	$(RC) $< -o $@
@@ -116,7 +118,7 @@ $(OBJDIR_DEBUG)/%.res.o: $(RESDIR)/%.rc
 # Clean up generated files
 clean:
 	@IF EXIST $(OBJDIR) $(RMDIR) $(OBJDIR)
-	@IF EXIST $(BINDIR_DEBUG) $(RMDIR) $(BINDIR_DEBUG)
+	@IF EXIST "$(BINDIR_DEBUG)" $(RMDIR) "$(BINDIR_DEBUG)"
 	@echo Clean complete!
 
 info:
