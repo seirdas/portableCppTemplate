@@ -1,4 +1,4 @@
-# Nombre del ejecutable
+# Propiedades del ejecutable
 TARGET = program.exe
 VERSION = 0.2
 COPYRIGHT = "Copyright (C)"
@@ -9,7 +9,6 @@ SRCDIR = src
 OBJDIR = obj
 BINDIR = bin
 RESDIR = res
-
 OBJDIR_RELEASE = $(OBJDIR)/release
 OBJDIR_DEBUG = $(OBJDIR)/debug
 BINDIR_RELEASE = $(BINDIR)/release
@@ -17,8 +16,8 @@ BINDIR_DEBUG = $(BINDIR)/debug
 
 # Parametros del compilador
 CC = "$(COMPILER_DIR)g++" -B"$(COMPILER_DIR)"
-CFLAGS = -Wall -Wextra 
-LDFLAGS = -L"$(COMPILER_DIR)lib" -static-libgcc -static-libstdc++
+CFLAGS = -Wall -Wextra -Wl,--no-undefined -std=c++17 -I"$(COMPILER_DIR)include"
+LDFLAGS = -L"$(COMPILER_DIR)lib" -static-libstdc++ 
 
 # Comandos
 # Check for Windows
@@ -32,18 +31,14 @@ else
     MKDIR 	:= mkdir -p
 endif
 
-# Archivos de código (Carpeta /src)
+# Archivos de código (Carpeta /src) y objetos (Carpeta /obj)
 SOURCES := $(wildcard $(SRCDIR)/*.cpp)
 HEADERS := $(wildcard $(SRCDIR)/*.h*)
-
-# Objetos
 OBJS_RELEASE := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR_RELEASE)/%.o)
 OBJS_DEBUG := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR_DEBUG)/%.o)
 
-# Compilador de recursos
+# Compilador de recursos (carpeta /res)
 RC = "$(COMPILER_DIR)windres"
-
-# Archivos de recursos (Carpeta /res)
 RESOURCES := $(wildcard $(RESDIR)/*.rc)
 OBJS_RES_RELEASE := $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR_RELEASE)/%.res.o)
 DEBUG_RES_OBJECTS := $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR_DEBUG)/%.res.o)
@@ -52,17 +47,21 @@ DEBUG_RES_OBJECTS := $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR_DEBUG)/%.res.o)
 SFML_INCLUDE 				:= -I$(wildcard dependencies/SFML*/SFML*/include)
 SFML_LIB					:= $(wildcard dependencies/SFML*/SFML*/lib)
 
-SFML_RELEASE_LIBS			:= sfml-window sfml-graphics sfml-system sfml-audio sfml-network
-SFML_DEBUG_LIBS				:= $(foreach lib,$(SFML_RELEASE_LIBS),$(lib)-d)
+# SFML3_RELEASE_LIBS		:= System Window Graphics Audio Network
+# SFML3_DEBUG_LIBS			:= $(foreach lib,$(SFML3_RELEASE_LIBS),$(lib)-d)
+SFML2_RELEASE_LIBS			:= sfml-system sfml-window sfml-graphics sfml-audio sfml-network
+SFML2_DEBUG_LIBS			:= $(foreach lib,$(SFML2_RELEASE_LIBS),$(lib)-d)
 
-SFML_RELEASE_LDFLAGS 		:= -L$(SFML_LIB) $(foreach lib,$(SFML_RELEASE_LIBS),-l$(lib))
-SFML_DEBUG_LDFLAGS 			:= -L$(SFML_LIB) $(foreach lib,$(SFML_DEBUG_LIBS),-l$(lib))
+SFML2_RELEASE_LDFLAGS 		:= -L$(SFML_LIB) $(foreach lib,$(SFML2_RELEASE_LIBS),-l$(lib))
+SFML2_DEBUG_LDFLAGS 		:= -L"$(SFML_LIB)" $(foreach lib,$(SFML2_DEBUG_LIBS),-l$(lib))
+
+# SFML3_RELEASE_LDFLAGS 	:= -L$(SFML_LIB) $(foreach lib,$(SFML3_RELEASE_LIBS),-l$(lib))
+# SFML3_DEBUG_LDFLAGS 		:= -L"$(SFML_LIB)" $(foreach lib,$(SFML3_DEBUG_LIBS),-l$(lib))
 
 SFML_BIN					:= $(wildcard dependencies/SFML*/SFML*/bin)
 SFML_DLLS					:= $(notdir $(wildcard $(SFML_BIN)/*.dll))
 SFML_RELEASE_DLLS 			:= $(foreach file, $(SFML_DLLS), $(if $(findstring -d-, $(file)),, $(file)))
 SFML_DEBUG_DLLS 			:= $(foreach file, $(SFML_DLLS), $(if $(findstring -d-, $(file)), $(file)))
-
 
 
 ################################
@@ -90,12 +89,13 @@ $(SFML_RELEASE_DLLS):
 # Link the object files to create the executable (with -L linker)
 $(BINDIR_RELEASE)/$(TARGET): $(OBJS_RELEASE) $(OBJS_RES_RELEASE)
 	@echo ------ Release compiling started: $(TARGET) ------
-	$(CC) $(OBJS_RELEASE) $(OBJS_RES_RELEASE) -o $@ $(LDFLAGS) $(SFML_RELEASE_LDFLAGS) \
+	$(CC) $(OBJS_RELEASE) $(OBJS_RES_RELEASE) $(LDFLAGS) $(SFML2_RELEASE_LDFLAGS) -o $@ \
 		-DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo ------ Release compilation complete!
+
 $(BINDIR_DEBUG)/$(TARGET): $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) $(SFML_DEBUG_DLLS)
 	@echo ------ Debug compiling started: $(TARGET) ------
-	$(CC) $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) -o $@ $(LDFLAGS) $(SFML_DEBUG_LDFLAGS) \
+	$(CC) $(OBJS_DEBUG) $(DEBUG_RES_OBJECTS) $(LDFLAGS) $(SFML2_DEBUG_LDFLAGS) -o $@  \
 		-DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo ------ Debug compilation complete! ------
 
@@ -128,8 +128,8 @@ info:
 	@echo # SFML_INCLUDE: $(SFML_INCLUDE)
 	@echo # SFML_LIB: $(SFML_LIB)
 	@echo # SFML_BIN: $(SFML_BIN)
-	@echo # SFML_RELEASE_LIBS: $(SFML_RELEASE_LIBS)
-	@echo # SFML_DEBUG_LIBS: $(SFML_DEBUG_LIBS)
+	@echo # SFML2_RELEASE_LIBS: $(SFML2_RELEASE_LIBS)
+	@echo # SFML2_DEBUG_LIBS: $(SFML2_DEBUG_LIBS)
 	@echo # SFML_RELEASE_LDFLAGS: $(SFML_RELEASE_LDFLAGS)
 	@echo # SFML_DEBUG_LDFLAGS: $(SFML_DEBUG_LDFLAGS)
 	@echo # SFML_RELEASE_DLLS: $(SFML_RELEASE_DLLS)
