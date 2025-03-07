@@ -1,5 +1,519 @@
-dependencies
-+---SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit
+Listado de rutas de carpetas para el volumen secrespo
+El número de serie del volumen es FCF0-2AA7
+D:.
+¦   sfml
+¦   SFML.mk
+¦   
++---SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit
+¦   +---SFML-2.6.2
+¦       ¦   changelog.md
+¦       ¦   license.md
+¦       ¦   readme.md
+¦       ¦   
+¦       +---bin
+¦       ¦       openal32.dll
+¦       ¦       sfml-audio-2.dll
+¦       ¦       sfml-audio-d-2.dll
+¦       ¦       sfml-graphics-2.dll
+¦       ¦       sfml-graphics-d-2.dll
+¦       ¦       sfml-network-2.dll
+¦       ¦       sfml-network-d-2.dll
+¦       ¦       sfml-system-2.dll
+¦       ¦       sfml-system-d-2.dll
+¦       ¦       sfml-window-2.dll
+¦       ¦       sfml-window-d-2.dll
+¦       ¦       
+¦       +---doc
+¦       ¦   +---SFML
+¦       ¦       ¦   license.md
+¦       ¦       ¦   readme.md
+¦       ¦       ¦   SFML.tag
+¦       ¦       ¦   
+¦       ¦       +---html
+¦       ¦               AlResource_8hpp.html
+¦       ¦               AlResource_8hpp_source.html
+¦       ¦               annotated.html
+¦       ¦               Audio_2Export_8hpp.html
+¦       ¦               Audio_2Export_8hpp_source.html
+¦       ¦               Audio_8hpp.html
+¦       ¦               Audio_8hpp_source.html
+¦       ¦               bc_s.png
+¦       ¦               bc_sd.png
+¦       ¦               BlendMode_8hpp.html
+¦       ¦               BlendMode_8hpp_source.html
+¦       ¦               CircleShape_8hpp.html
+¦       ¦               CircleShape_8hpp_source.html
+¦       ¦               classes.html
+¦       ¦               classsf_1_1AlResource-members.html
+¦       ¦               classsf_1_1AlResource.html
+¦       ¦               classsf_1_1AlResource.png
+¦       ¦               classsf_1_1CircleShape-members.html
+¦       ¦               classsf_1_1CircleShape.html
+¦       ¦               classsf_1_1CircleShape.png
+¦       ¦               classsf_1_1Clipboard-members.html
+¦       ¦               classsf_1_1Clipboard.html
+¦       ¦               classsf_1_1Clock-members.html
+¦       ¦               classsf_1_1Clock.html
+¦       ¦               classsf_1_1Color-members.html
+¦       ¦               classsf_1_1Color.html
+¦       ¦               classsf_1_1Context-members.html
+¦       ¦               classsf_1_1Context.html
+¦       ¦               classsf_1_1Context.png
+¦       ¦               classsf_1_1ConvexShape-members.html
+¦       ¦               classsf_1_1ConvexShape.html
+¦       ¦               classsf_1_1ConvexShape.png
+¦       ¦               classsf_1_1Cursor-members.html
+¦       ¦               classsf_1_1Cursor.html
+¦       ¦               classsf_1_1Cursor.png
+¦       ¦               classsf_1_1Drawable-members.html
+¦       ¦               classsf_1_1Drawable.html
+¦       ¦               classsf_1_1Drawable.png
+¦       ¦               classsf_1_1Event-members.html
+¦       ¦               classsf_1_1Event.html
+¦       ¦               classsf_1_1FileInputStream-members.html
+¦       ¦               classsf_1_1FileInputStream.html
+¦       ¦               classsf_1_1FileInputStream.png
+¦       ¦               classsf_1_1Font-members.html
+¦       ¦               classsf_1_1Font.html
+¦       ¦               classsf_1_1Ftp-members.html
+¦       ¦               classsf_1_1Ftp.html
+¦       ¦               classsf_1_1Ftp.png
+¦       ¦               classsf_1_1Ftp_1_1DirectoryResponse-members.html
+¦       ¦               classsf_1_1Ftp_1_1DirectoryResponse.html
+¦       ¦               classsf_1_1Ftp_1_1DirectoryResponse.png
+¦       ¦               classsf_1_1Ftp_1_1ListingResponse-members.html
+¦       ¦               classsf_1_1Ftp_1_1ListingResponse.html
+¦       ¦               classsf_1_1Ftp_1_1ListingResponse.png
+¦       ¦               classsf_1_1Ftp_1_1Response-members.html
+¦       ¦               classsf_1_1Ftp_1_1Response.html
+¦       ¦               classsf_1_1Ftp_1_1Response.png
+¦       ¦               classsf_1_1GlResource-members.html
+¦       ¦               classsf_1_1GlResource.html
+¦       ¦               classsf_1_1GlResource.png
+¦       ¦               classsf_1_1GlResource_1_1TransientContextLock-members.html
+¦       ¦               classsf_1_1GlResource_1_1TransientContextLock.html
+¦       ¦               classsf_1_1GlResource_1_1TransientContextLock.png
+¦       ¦               classsf_1_1Glyph-members.html
+¦       ¦               classsf_1_1Glyph.html
+¦       ¦               classsf_1_1Http-members.html
+¦       ¦               classsf_1_1Http.html
+¦       ¦               classsf_1_1Http.png
+¦       ¦               classsf_1_1Http_1_1Request-members.html
+¦       ¦               classsf_1_1Http_1_1Request.html
+¦       ¦               classsf_1_1Http_1_1Response-members.html
+¦       ¦               classsf_1_1Http_1_1Response.html
+¦       ¦               classsf_1_1Image-members.html
+¦       ¦               classsf_1_1Image.html
+¦       ¦               classsf_1_1InputSoundFile-members.html
+¦       ¦               classsf_1_1InputSoundFile.html
+¦       ¦               classsf_1_1InputSoundFile.png
+¦       ¦               classsf_1_1InputStream-members.html
+¦       ¦               classsf_1_1InputStream.html
+¦       ¦               classsf_1_1InputStream.png
+¦       ¦               classsf_1_1IpAddress-members.html
+¦       ¦               classsf_1_1IpAddress.html
+¦       ¦               classsf_1_1Joystick-members.html
+¦       ¦               classsf_1_1Joystick.html
+¦       ¦               classsf_1_1Keyboard-members.html
+¦       ¦               classsf_1_1Keyboard.html
+¦       ¦               classsf_1_1Listener-members.html
+¦       ¦               classsf_1_1Listener.html
+¦       ¦               classsf_1_1Lock-members.html
+¦       ¦               classsf_1_1Lock.html
+¦       ¦               classsf_1_1Lock.png
+¦       ¦               classsf_1_1MemoryInputStream-members.html
+¦       ¦               classsf_1_1MemoryInputStream.html
+¦       ¦               classsf_1_1MemoryInputStream.png
+¦       ¦               classsf_1_1Mouse-members.html
+¦       ¦               classsf_1_1Mouse.html
+¦       ¦               classsf_1_1Music-members.html
+¦       ¦               classsf_1_1Music.html
+¦       ¦               classsf_1_1Music.png
+¦       ¦               classsf_1_1Mutex-members.html
+¦       ¦               classsf_1_1Mutex.html
+¦       ¦               classsf_1_1Mutex.png
+¦       ¦               classsf_1_1NonCopyable-members.html
+¦       ¦               classsf_1_1NonCopyable.html
+¦       ¦               classsf_1_1NonCopyable.png
+¦       ¦               classsf_1_1OutputSoundFile-members.html
+¦       ¦               classsf_1_1OutputSoundFile.html
+¦       ¦               classsf_1_1OutputSoundFile.png
+¦       ¦               classsf_1_1Packet-members.html
+¦       ¦               classsf_1_1Packet.html
+¦       ¦               classsf_1_1Rect-members.html
+¦       ¦               classsf_1_1Rect.html
+¦       ¦               classsf_1_1RectangleShape-members.html
+¦       ¦               classsf_1_1RectangleShape.html
+¦       ¦               classsf_1_1RectangleShape.png
+¦       ¦               classsf_1_1RenderStates-members.html
+¦       ¦               classsf_1_1RenderStates.html
+¦       ¦               classsf_1_1RenderTarget-members.html
+¦       ¦               classsf_1_1RenderTarget.html
+¦       ¦               classsf_1_1RenderTarget.png
+¦       ¦               classsf_1_1RenderTexture-members.html
+¦       ¦               classsf_1_1RenderTexture.html
+¦       ¦               classsf_1_1RenderTexture.png
+¦       ¦               classsf_1_1RenderWindow-members.html
+¦       ¦               classsf_1_1RenderWindow.html
+¦       ¦               classsf_1_1RenderWindow.png
+¦       ¦               classsf_1_1Sensor-members.html
+¦       ¦               classsf_1_1Sensor.html
+¦       ¦               classsf_1_1Shader-members.html
+¦       ¦               classsf_1_1Shader.html
+¦       ¦               classsf_1_1Shader.png
+¦       ¦               classsf_1_1Shape-members.html
+¦       ¦               classsf_1_1Shape.html
+¦       ¦               classsf_1_1Shape.png
+¦       ¦               classsf_1_1Socket-members.html
+¦       ¦               classsf_1_1Socket.html
+¦       ¦               classsf_1_1Socket.png
+¦       ¦               classsf_1_1SocketSelector-members.html
+¦       ¦               classsf_1_1SocketSelector.html
+¦       ¦               classsf_1_1Sound-members.html
+¦       ¦               classsf_1_1Sound.html
+¦       ¦               classsf_1_1Sound.png
+¦       ¦               classsf_1_1SoundBuffer-members.html
+¦       ¦               classsf_1_1SoundBuffer.html
+¦       ¦               classsf_1_1SoundBuffer.png
+¦       ¦               classsf_1_1SoundBufferRecorder-members.html
+¦       ¦               classsf_1_1SoundBufferRecorder.html
+¦       ¦               classsf_1_1SoundBufferRecorder.png
+¦       ¦               classsf_1_1SoundFileFactory-members.html
+¦       ¦               classsf_1_1SoundFileFactory.html
+¦       ¦               classsf_1_1SoundFileReader-members.html
+¦       ¦               classsf_1_1SoundFileReader.html
+¦       ¦               classsf_1_1SoundFileWriter-members.html
+¦       ¦               classsf_1_1SoundFileWriter.html
+¦       ¦               classsf_1_1SoundRecorder-members.html
+¦       ¦               classsf_1_1SoundRecorder.html
+¦       ¦               classsf_1_1SoundRecorder.png
+¦       ¦               classsf_1_1SoundSource-members.html
+¦       ¦               classsf_1_1SoundSource.html
+¦       ¦               classsf_1_1SoundSource.png
+¦       ¦               classsf_1_1SoundStream-members.html
+¦       ¦               classsf_1_1SoundStream.html
+¦       ¦               classsf_1_1SoundStream.png
+¦       ¦               classsf_1_1Sprite-members.html
+¦       ¦               classsf_1_1Sprite.html
+¦       ¦               classsf_1_1Sprite.png
+¦       ¦               classsf_1_1String-members.html
+¦       ¦               classsf_1_1String.html
+¦       ¦               classsf_1_1TcpListener-members.html
+¦       ¦               classsf_1_1TcpListener.html
+¦       ¦               classsf_1_1TcpListener.png
+¦       ¦               classsf_1_1TcpSocket-members.html
+¦       ¦               classsf_1_1TcpSocket.html
+¦       ¦               classsf_1_1TcpSocket.png
+¦       ¦               classsf_1_1Text-members.html
+¦       ¦               classsf_1_1Text.html
+¦       ¦               classsf_1_1Text.png
+¦       ¦               classsf_1_1Texture-members.html
+¦       ¦               classsf_1_1Texture.html
+¦       ¦               classsf_1_1Texture.png
+¦       ¦               classsf_1_1Thread-members.html
+¦       ¦               classsf_1_1Thread.html
+¦       ¦               classsf_1_1Thread.png
+¦       ¦               classsf_1_1ThreadLocal-members.html
+¦       ¦               classsf_1_1ThreadLocal.html
+¦       ¦               classsf_1_1ThreadLocal.png
+¦       ¦               classsf_1_1ThreadLocalPtr-members.html
+¦       ¦               classsf_1_1ThreadLocalPtr.html
+¦       ¦               classsf_1_1ThreadLocalPtr.png
+¦       ¦               classsf_1_1Time-members.html
+¦       ¦               classsf_1_1Time.html
+¦       ¦               classsf_1_1Touch-members.html
+¦       ¦               classsf_1_1Touch.html
+¦       ¦               classsf_1_1Transform-members.html
+¦       ¦               classsf_1_1Transform.html
+¦       ¦               classsf_1_1Transformable-members.html
+¦       ¦               classsf_1_1Transformable.html
+¦       ¦               classsf_1_1Transformable.png
+¦       ¦               classsf_1_1UdpSocket-members.html
+¦       ¦               classsf_1_1UdpSocket.html
+¦       ¦               classsf_1_1UdpSocket.png
+¦       ¦               classsf_1_1Utf.html
+¦       ¦               classsf_1_1Utf_3_0116_01_4-members.html
+¦       ¦               classsf_1_1Utf_3_0116_01_4.html
+¦       ¦               classsf_1_1Utf_3_0132_01_4-members.html
+¦       ¦               classsf_1_1Utf_3_0132_01_4.html
+¦       ¦               classsf_1_1Utf_3_018_01_4-members.html
+¦       ¦               classsf_1_1Utf_3_018_01_4.html
+¦       ¦               classsf_1_1Vector2-members.html
+¦       ¦               classsf_1_1Vector2.html
+¦       ¦               classsf_1_1Vector3-members.html
+¦       ¦               classsf_1_1Vector3.html
+¦       ¦               classsf_1_1Vertex-members.html
+¦       ¦               classsf_1_1Vertex.html
+¦       ¦               classsf_1_1VertexArray-members.html
+¦       ¦               classsf_1_1VertexArray.html
+¦       ¦               classsf_1_1VertexArray.png
+¦       ¦               classsf_1_1VertexBuffer-members.html
+¦       ¦               classsf_1_1VertexBuffer.html
+¦       ¦               classsf_1_1VertexBuffer.png
+¦       ¦               classsf_1_1VideoMode-members.html
+¦       ¦               classsf_1_1VideoMode.html
+¦       ¦               classsf_1_1View-members.html
+¦       ¦               classsf_1_1View.html
+¦       ¦               classsf_1_1Vulkan-members.html
+¦       ¦               classsf_1_1Vulkan.html
+¦       ¦               classsf_1_1Window-members.html
+¦       ¦               classsf_1_1Window.html
+¦       ¦               classsf_1_1Window.png
+¦       ¦               classsf_1_1WindowBase-members.html
+¦       ¦               classsf_1_1WindowBase.html
+¦       ¦               classsf_1_1WindowBase.png
+¦       ¦               clipboard.js
+¦       ¦               Clipboard_8hpp.html
+¦       ¦               Clipboard_8hpp_source.html
+¦       ¦               Clock_8hpp.html
+¦       ¦               Clock_8hpp_source.html
+¦       ¦               closed.png
+¦       ¦               Color_8hpp.html
+¦       ¦               Color_8hpp_source.html
+¦       ¦               Config_8hpp.html
+¦       ¦               Config_8hpp_source.html
+¦       ¦               ContextSettings_8hpp.html
+¦       ¦               ContextSettings_8hpp_source.html
+¦       ¦               Context_8hpp.html
+¦       ¦               Context_8hpp_source.html
+¦       ¦               ConvexShape_8hpp.html
+¦       ¦               ConvexShape_8hpp_source.html
+¦       ¦               cookie.js
+¦       ¦               Cursor_8hpp.html
+¦       ¦               Cursor_8hpp_source.html
+¦       ¦               deprecated.html
+¦       ¦               dir_5cf786e58cbf7297a26339ae6e44357c.html
+¦       ¦               dir_83d50c0b1f1eceb6f182949162e90861.html
+¦       ¦               dir_89e9fb32471ae291b179a889144513db.html
+¦       ¦               dir_c0a853e81d6f1c1f0a3eb7a27dc24256.html
+¦       ¦               dir_d44c64559bbebec7f509842c48db8b23.html
+¦       ¦               dir_dd49ddb3ba8035e4a328f8c5f31cda7e.html
+¦       ¦               dir_e68e8157741866f444e17edd764ebbae.html
+¦       ¦               dir_e71ec51a9abd604c65f6abb639f6ea75.html
+¦       ¦               doc.svg
+¦       ¦               docd.svg
+¦       ¦               doxygen.css
+¦       ¦               doxygen.svg
+¦       ¦               doxygen_crawl.html
+¦       ¦               Drawable_8hpp.html
+¦       ¦               Drawable_8hpp_source.html
+¦       ¦               dynsections.js
+¦       ¦               Err_8hpp.html
+¦       ¦               Err_8hpp_source.html
+¦       ¦               Event_8hpp.html
+¦       ¦               Event_8hpp_source.html
+¦       ¦               FileInputStream_8hpp.html
+¦       ¦               FileInputStream_8hpp_source.html
+¦       ¦               files.html
+¦       ¦               folderclosed.svg
+¦       ¦               folderclosedd.svg
+¦       ¦               folderopen.svg
+¦       ¦               folderopend.svg
+¦       ¦               Font_8hpp.html
+¦       ¦               Font_8hpp_source.html
+¦       ¦               Ftp_8hpp.html
+¦       ¦               Ftp_8hpp_source.html
+¦       ¦               functions.html
+¦       ¦               functions_b.html
+¦       ¦               functions_c.html
+¦       ¦               functions_d.html
+¦       ¦               functions_e.html
+¦       ¦               functions_enum.html
+¦       ¦               functions_eval.html
+¦       ¦               functions_eval_b.html
+¦       ¦               functions_eval_c.html
+¦       ¦               functions_eval_d.html
+¦       ¦               functions_eval_e.html
+¦       ¦               functions_eval_f.html
+¦       ¦               functions_eval_g.html
+¦       ¦               functions_eval_h.html
+¦       ¦               functions_eval_i.html
+¦       ¦               functions_eval_j.html
+¦       ¦               functions_eval_k.html
+¦       ¦               functions_eval_l.html
+¦       ¦               functions_eval_m.html
+¦       ¦               functions_eval_n.html
+¦       ¦               functions_eval_o.html
+¦       ¦               functions_eval_p.html
+¦       ¦               functions_eval_q.html
+¦       ¦               functions_eval_r.html
+¦       ¦               functions_eval_s.html
+¦       ¦               functions_eval_t.html
+¦       ¦               functions_eval_u.html
+¦       ¦               functions_eval_v.html
+¦       ¦               functions_eval_w.html
+¦       ¦               functions_eval_x.html
+¦       ¦               functions_eval_y.html
+¦       ¦               functions_eval_z.html
+¦       ¦               functions_f.html
+¦       ¦               functions_func.html
+¦       ¦               
+¦       +---include
+¦       ¦   +---SFML
+¦       ¦       ¦   Audio.hpp
+¦       ¦       ¦   Config.hpp
+¦       ¦       ¦   GpuPreference.hpp
+¦       ¦       ¦   Graphics.hpp
+¦       ¦       ¦   Main.hpp
+¦       ¦       ¦   Network.hpp
+¦       ¦       ¦   OpenGL.hpp
+¦       ¦       ¦   System.hpp
+¦       ¦       ¦   Window.hpp
+¦       ¦       ¦   
+¦       ¦       +---Audio
+¦       ¦       ¦       AlResource.hpp
+¦       ¦       ¦       Export.hpp
+¦       ¦       ¦       InputSoundFile.hpp
+¦       ¦       ¦       Listener.hpp
+¦       ¦       ¦       Music.hpp
+¦       ¦       ¦       OutputSoundFile.hpp
+¦       ¦       ¦       Sound.hpp
+¦       ¦       ¦       SoundBuffer.hpp
+¦       ¦       ¦       SoundBufferRecorder.hpp
+¦       ¦       ¦       SoundFileFactory.hpp
+¦       ¦       ¦       SoundFileFactory.inl
+¦       ¦       ¦       SoundFileReader.hpp
+¦       ¦       ¦       SoundFileWriter.hpp
+¦       ¦       ¦       SoundRecorder.hpp
+¦       ¦       ¦       SoundSource.hpp
+¦       ¦       ¦       SoundStream.hpp
+¦       ¦       ¦       
+¦       ¦       +---Graphics
+¦       ¦       ¦       BlendMode.hpp
+¦       ¦       ¦       CircleShape.hpp
+¦       ¦       ¦       Color.hpp
+¦       ¦       ¦       ConvexShape.hpp
+¦       ¦       ¦       Drawable.hpp
+¦       ¦       ¦       Export.hpp
+¦       ¦       ¦       Font.hpp
+¦       ¦       ¦       Glsl.hpp
+¦       ¦       ¦       Glsl.inl
+¦       ¦       ¦       Glyph.hpp
+¦       ¦       ¦       Image.hpp
+¦       ¦       ¦       PrimitiveType.hpp
+¦       ¦       ¦       Rect.hpp
+¦       ¦       ¦       Rect.inl
+¦       ¦       ¦       RectangleShape.hpp
+¦       ¦       ¦       RenderStates.hpp
+¦       ¦       ¦       RenderTarget.hpp
+¦       ¦       ¦       RenderTexture.hpp
+¦       ¦       ¦       RenderWindow.hpp
+¦       ¦       ¦       Shader.hpp
+¦       ¦       ¦       Shape.hpp
+¦       ¦       ¦       Sprite.hpp
+¦       ¦       ¦       Text.hpp
+¦       ¦       ¦       Texture.hpp
+¦       ¦       ¦       Transform.hpp
+¦       ¦       ¦       Transformable.hpp
+¦       ¦       ¦       Vertex.hpp
+¦       ¦       ¦       VertexArray.hpp
+¦       ¦       ¦       VertexBuffer.hpp
+¦       ¦       ¦       View.hpp
+¦       ¦       ¦       
+¦       ¦       +---Network
+¦       ¦       ¦       Export.hpp
+¦       ¦       ¦       Ftp.hpp
+¦       ¦       ¦       Http.hpp
+¦       ¦       ¦       IpAddress.hpp
+¦       ¦       ¦       Packet.hpp
+¦       ¦       ¦       Socket.hpp
+¦       ¦       ¦       SocketHandle.hpp
+¦       ¦       ¦       SocketSelector.hpp
+¦       ¦       ¦       TcpListener.hpp
+¦       ¦       ¦       TcpSocket.hpp
+¦       ¦       ¦       UdpSocket.hpp
+¦       ¦       ¦       
+¦       ¦       +---System
+¦       ¦       ¦       Clock.hpp
+¦       ¦       ¦       Err.hpp
+¦       ¦       ¦       Export.hpp
+¦       ¦       ¦       FileInputStream.hpp
+¦       ¦       ¦       InputStream.hpp
+¦       ¦       ¦       Lock.hpp
+¦       ¦       ¦       MemoryInputStream.hpp
+¦       ¦       ¦       Mutex.hpp
+¦       ¦       ¦       NativeActivity.hpp
+¦       ¦       ¦       NonCopyable.hpp
+¦       ¦       ¦       Sleep.hpp
+¦       ¦       ¦       String.hpp
+¦       ¦       ¦       String.inl
+¦       ¦       ¦       Thread.hpp
+¦       ¦       ¦       Thread.inl
+¦       ¦       ¦       ThreadLocal.hpp
+¦       ¦       ¦       ThreadLocalPtr.hpp
+¦       ¦       ¦       ThreadLocalPtr.inl
+¦       ¦       ¦       Time.hpp
+¦       ¦       ¦       Utf.hpp
+¦       ¦       ¦       Utf.inl
+¦       ¦       ¦       Vector2.hpp
+¦       ¦       ¦       Vector2.inl
+¦       ¦       ¦       Vector3.hpp
+¦       ¦       ¦       Vector3.inl
+¦       ¦       ¦       
+¦       ¦       +---Window
+¦       ¦               Clipboard.hpp
+¦       ¦               Context.hpp
+¦       ¦               ContextSettings.hpp
+¦       ¦               Cursor.hpp
+¦       ¦               Event.hpp
+¦       ¦               Export.hpp
+¦       ¦               GlResource.hpp
+¦       ¦               Joystick.hpp
+¦       ¦               Keyboard.hpp
+¦       ¦               Mouse.hpp
+¦       ¦               Sensor.hpp
+¦       ¦               Touch.hpp
+¦       ¦               VideoMode.hpp
+¦       ¦               Vulkan.hpp
+¦       ¦               Window.hpp
+¦       ¦               WindowBase.hpp
+¦       ¦               WindowHandle.hpp
+¦       ¦               WindowStyle.hpp
+¦       ¦               
+¦       +---lib
+¦           ¦   libFLAC.a
+¦           ¦   libfreetype.a
+¦           ¦   libogg.a
+¦           ¦   libopenal32.a
+¦           ¦   libsfml-audio-d.a
+¦           ¦   libsfml-audio-s-d.a
+¦           ¦   libsfml-audio-s.a
+¦           ¦   libsfml-audio.a
+¦           ¦   libsfml-graphics-d.a
+¦           ¦   libsfml-graphics-s-d.a
+¦           ¦   libsfml-graphics-s.a
+¦           ¦   libsfml-graphics.a
+¦           ¦   libsfml-main-d.a
+¦           ¦   libsfml-main.a
+¦           ¦   libsfml-network-d.a
+¦           ¦   libsfml-network-s-d.a
+¦           ¦   libsfml-network-s.a
+¦           ¦   libsfml-network.a
+¦           ¦   libsfml-system-d.a
+¦           ¦   libsfml-system-s-d.a
+¦           ¦   libsfml-system-s.a
+¦           ¦   libsfml-system.a
+¦           ¦   libsfml-window-d.a
+¦           ¦   libsfml-window-s-d.a
+¦           ¦   libsfml-window-s.a
+¦           ¦   libsfml-window.a
+¦           ¦   libvorbis.a
+¦           ¦   libvorbisenc.a
+¦           ¦   libvorbisfile.a
+¦           ¦   
+¦           +---cmake
+¦               +---SFML
+¦                       SFMLConfig.cmake
+¦                       SFMLConfigDependencies.cmake
+¦                       SFMLConfigVersion.cmake
+¦                       SFMLSharedTargets-debug.cmake
+¦                       SFMLSharedTargets-release.cmake
+¦                       SFMLSharedTargets.cmake
+¦                       SFMLStaticTargets-debug.cmake
+¦                       SFMLStaticTargets-release.cmake
+¦                       SFMLStaticTargets.cmake
+¦                       
++---___SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit
     +---SFML-3.0.0
         +---bin
         ¦       sfml-audio-3.dll
