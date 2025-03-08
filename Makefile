@@ -14,7 +14,6 @@ OBJDIR_DEBUG 		:= obj/debug
 OBJDIR_RELEASE 		:= obj/release
 BINDIR_RELEASE 		:= bin/release
 BINDIR_DEBUG 		:= bin/debug
-DLLS_TMP 			:= tmp
 
 ifeq ($(findstring debug, $(BUILD_TYPE)), debug)
 	OBJDIR 			:= $(OBJDIR_DEBUG)
@@ -48,7 +47,7 @@ LDFLAGS 			:= -L"$(COMPILER_DIR)lib"
 # Comandos
 ifeq ($(OS), Windows_NT)
     RMDIR 			:= rmdir /s /q
-    COPY 			:= xcopy /-I /y 
+    COPY 			:= xcopy /q /-I /y 
     MKDIR 			:= mkdir
 else
     RMDIR 			:= rm -rf
@@ -96,7 +95,7 @@ $(OBJDIR) $(BINDIR):
 
 # Copy dlls
 $(BINDIR)/%.dll: $(SFML_BIN)/%.dll
-	$(if $(filter $@,$(SFML_DLLS)),@$(COPY) "$(subst /,\,$(SFML_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
+	$(if $(filter $(notdir $@),$(SFML_DLLS)),@$(COPY) "$(subst /,\,$(SFML_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
 #	Añadir las demás DLLs de la misma manera, cambiando SFML_DLLS 
 
 ### CREATE EXECUTABLE - Link object files (with -L linker)
