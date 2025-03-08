@@ -1,0 +1,68 @@
++---SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit
+�   +---SFML-2.6.2
+�       +---bin
+�       +---doc
+�       �   +---SFML
+�       �       +---html
+�       +---include
+�       �   +---SFML
+�       �       +---Audio
+�       �       +---Graphics
+�       �       +---Network
+�       �       +---System
+�       �       +---Window
+�       +---lib
+�           +---cmake
+�               +---SFML
++---___SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit
+    +---SFML-3.0.0
+        +---bin
+        +---doc
+        �   +---html
+        �       +---search
+        +---examples
+        �   +---assets
+        �   +---event_handling
+        �   �   +---resources
+        �   +---ftp
+        �   +---island
+        �   �   +---resources
+        �   +---joystick
+        �   �   +---resources
+        �   +---keyboard
+        �   �   +---resources
+        �   +---opengl
+        �   �   +---resources
+        �   +---raw_input
+        �   �   +---resources
+        �   +---shader
+        �   �   +---resources
+        �   +---sockets
+        �   +---sound
+        �   �   +---resources
+        �   +---sound_capture
+        �   +---sound_effects
+        �   �   +---resources
+        �   +---stencil
+        �   +---tennis
+        �   �   +---resources
+        �   +---voip
+        �   +---vulkan
+        �   �   +---resources
+        �   +---win32
+        �   �   +---resources
+        �   +---window
+        +---include
+        �   +---SFML
+        �       +---Audio
+        �       +---Graphics
+        �       +---Network
+        �       +---System
+        �       +---Window
+        +---lib
+            +---cmake
+                +---FLAC
+                +---freetype
+                +---Ogg
+                +---SFML
+                +---Vorbis
