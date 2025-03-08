@@ -1,4 +1,4 @@
-# Propiedades del ejecutable
+# Executable properties
 TARGET = program.exe
 VERSION = 0.3.0
 COPYRIGHT = "Copyright (C)"
@@ -6,7 +6,7 @@ COPYRIGHT = "Copyright (C)"
 BUILD_TYPE = $(MAKECMDGOALS)
 BUILD_TYPE ?= all	# if not defined, default is release
 
-# Rutas del proyecto
+# Project paths
 COMPILER_DIR 		:= $(dir $(MAKE))
 SRCDIR 				:= src
 RESDIR 				:= res
@@ -23,7 +23,7 @@ else
 	BINDIR 			:= $(BINDIR_RELEASE)
 endif
 
-# Parametros del compilador
+# Compiler params
 CC 					:= "$(COMPILER_DIR)g++" -B"$(COMPILER_DIR)" 
 
 CFLAGS 				:= -Wall -Wextra  -std=c++17 
@@ -44,7 +44,7 @@ LDFLAGS 			:= -L"$(COMPILER_DIR)lib"
 #	LDFLAGS += -Wl,-static
 
 ################################
-# Comandos
+# Commands
 ifeq ($(OS), Windows_NT)
     RMDIR 			:= rmdir /s /q
     COPY 			:= xcopy /q /-I /y 
@@ -56,12 +56,12 @@ else
 endif
 
 ################################
-# Archivos de código (Carpeta /src) y objetos (Carpeta /obj)
+# source files (/src folder) and objects (/obj folder)
 SOURCES 			:= $(wildcard $(SRCDIR)/*.cpp)
 HEADERS 			:= $(wildcard $(SRCDIR)/*.h*)
 OBJS 				:= $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
-# Compilador de recursos (carpeta /res)
+# resource compiler (carpeta /res)
 RC 					:= "$(COMPILER_DIR)windres"
 RESOURCES 			:= $(wildcard $(RESDIR)/*.rc)
 OBJS	 			+= $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR)/%.res.o)
@@ -79,10 +79,9 @@ TARGET_PREREQUISITES:=$(OBJDIR) $(BINDIR) $(OBJS) $(foreach file, $(DLLS), $(BIN
 
 ################################
 
-# Comandos
+# Tasks
 .PHONY: all debug release clean info
 
-# Main Tasks
 all: release
 forcerelease: clean_release release
 forcedebug: clean_debug debug
@@ -133,6 +132,7 @@ clean_debug:
 	@IF EXIST "$(OBJDIR_DEBUG)" $(RMDIR) "$(OBJDIR_DEBUG)"
 	@echo ------ Cleaned previous debug compilations
 
+# Show info
 info:
 	@echo # DLLS: $(DLLS)
 	@echo # TARGET_PREREQUISITES: $(TARGET_PREREQUISITES)
