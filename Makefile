@@ -14,6 +14,7 @@ OBJDIR_DEBUG 		:= obj/debug
 OBJDIR_RELEASE 		:= obj/release
 BINDIR_RELEASE 		:= bin/release
 BINDIR_DEBUG 		:= bin/debug
+DLLS_TMP 			:= tmp
 
 ifeq ($(findstring debug, $(BUILD_TYPE)), debug)
 	OBJDIR 			:= $(OBJDIR_DEBUG)
@@ -71,9 +72,14 @@ OBJS	 			+= $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR)/%.res.o)
 -include dependencies/SFML.mk
 INCLUDES 			+= $(SFML_INCLUDE)
 LDFLAGS 			+= $(SFML_LDFLAGS)
-
+DLLS 				+= $(SFML_DLLS)
 
 ################################
+# PREREQUISITES
+TARGET_PREREQUISITES:=$(OBJDIR) $(BINDIR) $(OBJS) $(foreach file, $(DLLS), $(BINDIR)/$(file))
+
+################################
+
 # Comandos
 .PHONY: all debug release clean info
 
@@ -82,18 +88,19 @@ all: release
 forcerelease: clean_release release
 forcedebug: clean_debug debug
 debug: release
-release: $(OBJDIR) $(BINDIR) $(SFML_DLLS) $(BINDIR)/$(TARGET)
+release:  $(BINDIR)/$(TARGET)
 
 # Create directories
 $(OBJDIR) $(BINDIR):
 	@mkdir "$@"
 
-# Copy dlls (tested on windows, could be better)
-$(SFML_DLLS):
-	@$(COPY) "$(subst /,\,$(SFML_BIN)/$@)" "$(subst /,\,$(BINDIR)/$@)"
+# Copy dlls
+$(BINDIR)/%.dll: $(SFML_BIN)/%.dll
+	$(if $(filter $@,$(SFML_DLLS)),@$(COPY) "$(subst /,\,$(SFML_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
+#	Añadir las demás DLLs de la misma manera, cambiando SFML_DLLS 
 
 ### CREATE EXECUTABLE - Link object files (with -L linker)
-$(BINDIR)/$(TARGET): $(OBJS) $(BINDIR)
+$(BINDIR)/$(TARGET): $(TARGET_PREREQUISITES)
 	@echo ------ Compiling started: $(TARGET) ------
 	$(CC) $(OBJS) $(LDFLAGS) -o $@ \
 		-DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
@@ -113,6 +120,7 @@ $(OBJDIR)/%.res.o: $(RESDIR)/%.rc
 clean:
 	@IF EXIST "$(BINDIR_DEBUG)" $(RMDIR) "$(BINDIR_DEBUG)"
 	@IF EXIST "$(OBJDIR_DEBUG)" $(RMDIR) "$(OBJDIR_DEBUG)"
+	@IF EXIST "$(OBJDIR_RELEASE)" $(RMDIR) "$(OBJDIR_RELEASE)"
 	@IF EXIST "obj" $(RMDIR) "obj"
 	@echo ------ Clean complete!
 
@@ -127,6 +135,9 @@ clean_debug:
 	@echo ------ Cleaned previous debug compilations
 
 info:
+	@echo # DLLS: $(DLLS)
+	@echo # TARGET_PREREQUISITES: $(TARGET_PREREQUISITES)
+	@echo # 
 	@echo # BUILD_TYPE: $(BUILD_TYPE)
 	@echo # RESOURCES: $(RESOURCES)
 	@echo # OBJS: $(OBJS)
