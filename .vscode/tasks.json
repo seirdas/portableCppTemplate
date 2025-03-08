@@ -4,7 +4,7 @@
         {
             "label": "Release",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
             "args": [],
             "group": "build",
             "problemMatcher": [
@@ -15,7 +15,7 @@
         {
             "label": "compile with make (release)",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
             "args": [
                 "release"
             ],
@@ -26,9 +26,35 @@
             "detail": "Compiles the project using make and all target (release)."
         },
         {
+            "label": "force release recompilation",
+            "type": "shell",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "args": [
+                "forcerelease"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles the project using make and all target (release)."
+        },
+        {
+            "label": "force debug recompilation",
+            "type": "shell",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "args": [
+                "forcedebug"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles the project using make and all target (release)."
+        },
+        {
             "label": "compile with make (debug)",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
             "args": [
                 "debug"
             ],
@@ -41,7 +67,7 @@
         {
             "label": "clean",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
             "args": [
                 "clean"
             ],
@@ -52,7 +78,7 @@
         {
             "label": "info",
             "type": "shell",
-            "command": "${config:COMPILER_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
             "args": [
                 "info"
             ],

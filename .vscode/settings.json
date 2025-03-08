@@ -1,6 +1,6 @@
 {
 
-    "COMPILER_PATH": "g:\\Apps\\w64devkit-x64-2.0.0",
+    "DEFAULT_PATH": "g:\\Apps\\w64devkit-x64-2.0.0",
     
     "MAKE_EXE" : "make.exe",
     "GDB_EXE" : "gdb.exe",

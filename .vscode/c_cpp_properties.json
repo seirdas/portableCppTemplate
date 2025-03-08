@@ -4,9 +4,9 @@
             "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${config:COMPILER_PATH}/lib"
+                "${config:DEFAULT_PATH}/lib"
             ],
-            "compilerPath": "${config:COMPILER_PATH}/bin/g++.exe",
+            "compilerPath": "${config:DEFAULT_PATH}/bin/g++.exe",
             "cStandard": "c23",
             "cppStandard": "c++17",
             "intelliSenseMode": "${default}",

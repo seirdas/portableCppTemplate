@@ -10,7 +10,7 @@
             "args": [],
             "externalConsole": false,
             "preLaunchTask": "compile with make (release)",
-            "miDebuggerPath": "${config:COMPILER_PATH}/bin/gdb.exe",
+            "miDebuggerPath": "${config:DEFAULT_PATH}/bin/gdb.exe",
             "miDebuggerArgs": ""
         },
         {
@@ -23,7 +23,7 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "preLaunchTask": "compile with make (debug)",
-            "miDebuggerPath": "${config:COMPILER_PATH}/bin/gdb.exe",
+            "miDebuggerPath": "${config:DEFAULT_PATH}/bin/gdb.exe",
             "miDebuggerArgs": ""
         }
     ]

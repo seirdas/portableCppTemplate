@@ -4,7 +4,7 @@ VERSION = 0.3.0
 COPYRIGHT = "Copyright (C)"
 
 BUILD_TYPE = $(MAKECMDGOALS)
-BUILD_TYPE ?= release	# if not defined, default is release
+BUILD_TYPE ?= all	# if not defined, default is release
 
 # Rutas del proyecto
 COMPILER_DIR 		:= $(dir $(MAKE))
@@ -15,7 +15,7 @@ OBJDIR_RELEASE 		:= obj/release
 BINDIR_RELEASE 		:= bin/release
 BINDIR_DEBUG 		:= bin/debug
 
-ifeq ($(BUILD_TYPE), debug)
+ifeq ($(findstring debug, $(BUILD_TYPE)), debug)
 	OBJDIR 			:= $(OBJDIR_DEBUG)
 	BINDIR 			:= $(BINDIR_DEBUG)
 else
@@ -26,15 +26,22 @@ endif
 # Parametros del compilador
 CC 					:= "$(COMPILER_DIR)g++" -B"$(COMPILER_DIR)" 
 
-CFLAGS 				:= -Wall -Wextra -Wl,--no-undefined -std=c++17 
+CFLAGS 				:= -Wall -Wextra  -std=c++17 
 ifeq ($(BUILD_TYPE), debug)
 	CFLAGS 			+= -g -O0
 else
 	CFLAGS 			+= -O2
 endif
+ifeq ($(OS), Windows_NT)
+# MinGW Windows API compatibility
+	CFLAGS 			+= -lmingw32 -lmingwex	
+endif
 
-INCLUDES 			:= -I"$(COMPILER_DIR)include"
-LDFLAGS 			:= -L"$(COMPILER_DIR)lib" -static-libstdc++ -static-libgcc 
+INCLUDES 			:= -I"$(COMPILER_DIR)include" -static-libgcc -static-libstdc++
+LDFLAGS 			:= -L"$(COMPILER_DIR)lib" 
+
+# set all libraries static
+#	LDFLAGS += -Wl,-static
 
 ################################
 # Comandos
@@ -65,12 +72,15 @@ OBJS	 			+= $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR)/%.res.o)
 INCLUDES 			+= $(SFML_INCLUDE)
 LDFLAGS 			+= $(SFML_LDFLAGS)
 
+
 ################################
 # Comandos
 .PHONY: all debug release clean info
 
 # Main Tasks
 all: release
+forcerelease: clean_release release
+forcedebug: clean_debug debug
 debug: release
 release: $(OBJDIR) $(BINDIR) $(SFML_DLLS) $(BINDIR)/$(TARGET)
 
@@ -105,6 +115,16 @@ clean:
 	@IF EXIST "$(OBJDIR_DEBUG)" $(RMDIR) "$(OBJDIR_DEBUG)"
 	@IF EXIST "obj" $(RMDIR) "obj"
 	@echo ------ Clean complete!
+
+clean_release: 
+	@IF EXIST "$(BINDIR_RELEASE)" $(RMDIR) "$(BINDIR_RELEASE)"
+	@IF EXIST "$(OBJDIR_RELEASE)" $(RMDIR) "$(OBJDIR_RELEASE)"
+	@echo ------ Cleaned previous release compilations
+
+clean_debug:
+	@IF EXIST "$(BINDIR_DEBUG)" $(RMDIR) "$(BINDIR_DEBUG)"
+	@IF EXIST "$(OBJDIR_DEBUG)" $(RMDIR) "$(OBJDIR_DEBUG)"
+	@echo ------ Cleaned previous debug compilations
 
 info:
 	@echo # BUILD_TYPE: $(BUILD_TYPE)
