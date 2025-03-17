@@ -1,5 +1,5 @@
 ################################ SFML ################################
-SFML_VERSION 				:= 2.5.1
+SFML_VERSION 				:= 3.0
 BUILD_TYPE 					?= release	# if not defined, default is release
 
 ######### Includes

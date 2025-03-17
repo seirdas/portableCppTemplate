@@ -1,9 +1,9 @@
 {
 
-    "DEFAULT_PATH": "g:\\Apps\\w64devkit-x64-2.0.0",
+    "DEFAULT_PATH": "G:\\Apps\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r3\\mingw64",
     
-    "MAKE_EXE" : "make.exe",
-    "GDB_EXE" : "gdb.exe",
+    "MAKE_EXE" : "bin\\mingw32-make.exe",
+    "GDB_EXE" : "bin\\gdb.exe",
 
     // same as makefile target
     "TARGET": "program",

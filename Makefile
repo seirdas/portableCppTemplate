@@ -1,4 +1,4 @@
-# Executable properties
+############### Compilation properties ###############
 TARGET = program.exe
 VERSION = 0.3.0
 COPYRIGHT = "Copyright (C)"
@@ -6,8 +6,15 @@ COPYRIGHT = "Copyright (C)"
 BUILD_TYPE = $(MAKECMDGOALS)
 BUILD_TYPE ?= all	# if not defined, default is release
 
-# Project paths
-COMPILER_DIR 		:= $(dir $(MAKE))
+LIBS ?= dynamic
+
+############### Compiler paths ###############
+COMPILER_DIR 		:= $(abspath $(MAKE)/../..)/
+COMPILER_BIN		:= $(COMPILER_DIR)/bin
+CC 					:= "$(COMPILER_BIN)/g++" -B"$(COMPILER_BIN)" 
+RC 					:= "$(COMPILER_BIN)/windres"
+
+############### Project paths ###############
 SRCDIR 				:= src
 RESDIR 				:= res
 OBJDIR_DEBUG 		:= obj/debug
@@ -23,11 +30,9 @@ else
 	BINDIR 			:= $(BINDIR_RELEASE)
 endif
 
-# Compiler params
-CC 					:= "$(COMPILER_DIR)g++" -B"$(COMPILER_DIR)" 
-
-CFLAGS 				:= -Wall -Wextra  -std=c++17 
-ifeq ($(BUILD_TYPE), debug)
+############### Compiler params ###############
+CFLAGS 				:= -Wall -Wextra -std=c++17 
+ifeq ($(findstring debug, $(BUILD_TYPE)), debug)
 	CFLAGS 			+= -g -O0
 else
 	CFLAGS 			+= -O2
@@ -37,17 +42,23 @@ ifeq ($(OS), Windows_NT)
 	CFLAGS 			+= -lmingw32 -lmingwex	
 endif
 
-INCLUDES 			:= -I"$(COMPILER_DIR)include" -static-libgcc -static-libstdc++
-LDFLAGS 			:= -L"$(COMPILER_DIR)lib" 
+INCLUDES 			:= -I"$(COMPILER_DIR)include" 
+COMPILER_LIBS		:= $(wildcard $(COMPILER_DIR)/lib)
+COMPILER_DLLS 		:= $(notdir $(wildcard $(COMPILER_BIN)/*.dll))
+LDFLAGS				:= $(foreach ldlib, $(COMPILER_LIBS), -L"$(ldlib)")
+# LDFLAGS 			+= -Wl,-Bstatic -static-libgcc -static-libstdc++
 
-# set all libraries static
-#	LDFLAGS += -Wl,-static
+MINGW_LIBS			+= $(wildcard $(COMPILER_DIR)*/lib)
+MINGW_BIN			+= $(wildcard $(COMPILER_DIR)*/bin)
+MINGW_DLLS 			:= $(notdir $(wildcard $(MINGW_DLLS_PATHS)/*.dll))
+LDFLAGS 			+= $(foreach ldlib, $(MINGW_LIBS), -L"$(ldlib)")
 
-################################
-# Commands
+# LDFLAGS 			+= -static-libgcc -static-libstdc++
+
+############### Commands ###############
 ifeq ($(OS), Windows_NT)
     RMDIR 			:= rmdir /s /q
-    COPY 			:= xcopy /q /-I /y 
+    COPY 			:= xcopy /-I /y 
     MKDIR 			:= mkdir
 else
     RMDIR 			:= rm -rf
@@ -55,34 +66,39 @@ else
     MKDIR 			:= mkdir -p
 endif
 
-################################
+############### Files ###############
 # source files (/src folder) and objects (/obj folder)
 SOURCES 			:= $(wildcard $(SRCDIR)/*.cpp)
 HEADERS 			:= $(wildcard $(SRCDIR)/*.h*)
 OBJS 				:= $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 # resource compiler (carpeta /res)
-RC 					:= "$(COMPILER_DIR)windres"
 RESOURCES 			:= $(wildcard $(RESDIR)/*.rc)
 OBJS	 			+= $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR)/%.res.o)
 
-################################ Dependencies ################################
-
+############### Dependencies ###############
 -include dependencies/SFML.mk
 INCLUDES 			+= $(SFML_INCLUDE)
-LDFLAGS 			+= $(SFML_LDFLAGS)
+LINKS 				+= $(SFML_LINKS)		# -L(PATH) -l(libs), for static will be -l(libs)-s
 DLLS 				+= $(SFML_DLLS)
 
-################################
-# PREREQUISITES
-TARGET_PREREQUISITES:=$(OBJDIR) $(BINDIR) $(OBJS) $(foreach file, $(DLLS), $(BINDIR)/$(file))
+# for sfml dynamic linking, the program will need stdc++-6.dll, gcc_s_dw2-1.dll and libwinpthread-1.dll
+# add them to the dlls list
+ifeq ($(findstring dynamic, $(LIBS)), dynamic)
+	DLLS 			+= libgcc_s_seh-1.dll libstdc++-6.dll libwinpthread-1.dll
+endif
 
-################################
+############### Pre-requisites ###############
+TARGET_PREREQUISITES:=$(OBJDIR) $(BINDIR) $(OBJS) 
+# dlls
+ifeq ($(findstring dynamic, $(LIBS)), dynamic)
+	TARGET_PREREQUISITES += $(foreach file, $(DLLS), $(BINDIR)/$(file))
+endif
 
-# Tasks
+############### Rules ###############
 .PHONY: all debug release clean info
 
-all: release
+all: release clean
 forcerelease: clean_release release
 forcedebug: clean_debug debug
 debug: release
@@ -93,14 +109,16 @@ $(OBJDIR) $(BINDIR):
 	@mkdir "$@"
 
 # Copy dlls
-$(BINDIR)/%.dll: $(SFML_BIN)/%.dll
+$(BINDIR)/%.dll:
+	$(if $(filter $(notdir $@),$(COMPILER_DLLS)),@$(COPY) "$(subst /,\,$(COMPILER_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
+	$(if $(filter $(notdir $@),$(MINGW_DLLS)),@$(COPY) "$(subst /,\,$(MINGW_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
 	$(if $(filter $(notdir $@),$(SFML_DLLS)),@$(COPY) "$(subst /,\,$(SFML_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
-#	Añadir las demás DLLs de la misma manera, cambiando SFML_DLLS 
+# 	Add other DLLs in the same way, changing SFML_DLLS
 
 ### CREATE EXECUTABLE - Link object files (with -L linker)
 $(BINDIR)/$(TARGET): $(TARGET_PREREQUISITES)
 	@echo ------ Compiling started: $(TARGET) ------
-	$(CC) $(OBJS) $(LDFLAGS) -o $@ \
+	$(CC) $(OBJS) $(LDFLAGS) $(LINKS) -o $@  \
 		-DVERSION=\"$(VERSION)\" -DCOPYRIGHT=\"$(COPYRIGHT)\"
 	@echo ------ Compilation complete! ------
 
@@ -134,7 +152,6 @@ clean_debug:
 
 # Show info
 info:
-	@echo # DLLS: $(DLLS)
 	@echo # TARGET_PREREQUISITES: $(TARGET_PREREQUISITES)
 	@echo # 
 	@echo # BUILD_TYPE: $(BUILD_TYPE)

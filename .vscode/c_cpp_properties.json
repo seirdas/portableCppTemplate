@@ -4,7 +4,8 @@
             "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${config:DEFAULT_PATH}/lib"
+                "${config:DEFAULT_PATH}/lib",
+                "${workspaceFolder}/dependencies/**/include"
             ],
             "compilerPath": "${config:DEFAULT_PATH}/bin/g++.exe",
             "cStandard": "c23",

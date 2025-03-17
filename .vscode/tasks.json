@@ -4,18 +4,7 @@
         {
             "label": "Release",
             "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
-            "args": [],
-            "group": "build",
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "detail": "Compiles the project in release and clean."
-        },
-        {
-            "label": "compile with make (release)",
-            "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/${config:MAKE_EXE}",
             "args": [
                 "release"
             ],
@@ -23,12 +12,12 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Compiles the project using make and all target (release)."
+            "detail": "Compile the project in release."
         },
         {
-            "label": "force release recompilation",
+            "label": "Force Release",
             "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/${config:MAKE_EXE}",
             "args": [
                 "forcerelease"
             ],
@@ -36,12 +25,12 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Compiles the project using make and all target (release)."
+            "detail": "Clean and recompile the project in release."
         },
         {
-            "label": "force debug recompilation",
+            "label": "Force Debug",
             "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/${config:MAKE_EXE}",
             "args": [
                 "forcedebug"
             ],
@@ -49,12 +38,12 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Compiles the project using make and all target (release)."
+            "detail": "Clean and recompile the project in debug."
         },
         {
-            "label": "compile with make (debug)",
+            "label": "Debug",
             "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/${config:MAKE_EXE}",
             "args": [
                 "debug"
             ],
@@ -62,12 +51,12 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "detail": "Compiles the project using make with the debug target."
+            "detail": "Compile the project in release."
         },
         {
             "label": "clean",
             "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/${config:MAKE_EXE}",
             "args": [
                 "clean"
             ],
@@ -78,7 +67,7 @@
         {
             "label": "info",
             "type": "shell",
-            "command": "${config:DEFAULT_PATH}/bin/${config:MAKE_EXE}",
+            "command": "${config:DEFAULT_PATH}/${config:MAKE_EXE}",
             "args": [
                 "info"
             ],

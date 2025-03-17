@@ -9,8 +9,8 @@
             "program": "${workspaceFolder}/bin/Release/${config:TARGET}.exe",
             "args": [],
             "externalConsole": false,
-            "preLaunchTask": "compile with make (release)",
-            "miDebuggerPath": "${config:DEFAULT_PATH}/bin/gdb.exe",
+            "preLaunchTask": "Release",
+            "miDebuggerPath": "${config:DEFAULT_PATH}/${config:GDB_EXE}",
             "miDebuggerArgs": ""
         },
         {
@@ -22,8 +22,8 @@
             "args": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "compile with make (debug)",
-            "miDebuggerPath": "${config:DEFAULT_PATH}/bin/gdb.exe",
+            "preLaunchTask": "Debug",
+            "miDebuggerPath": "${config:DEFAULT_PATH}/${config:GDB_EXE}",
             "miDebuggerArgs": ""
         }
     ]

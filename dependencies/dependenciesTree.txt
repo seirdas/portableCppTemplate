@@ -1,64 +1,49 @@
-+---SFML-2.6.2-windows-gcc-13.1.0-mingw-64-bit
-ï¿½   +---SFML-2.6.2
-ï¿½       +---bin
-ï¿½       +---doc
-ï¿½       ï¿½   +---SFML
-ï¿½       ï¿½       +---html
-ï¿½       +---include
-ï¿½       ï¿½   +---SFML
-ï¿½       ï¿½       +---Audio
-ï¿½       ï¿½       +---Graphics
-ï¿½       ï¿½       +---Network
-ï¿½       ï¿½       +---System
-ï¿½       ï¿½       +---Window
-ï¿½       +---lib
-ï¿½           +---cmake
-ï¿½               +---SFML
-+---___SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit
+
++---SFML-3.0.0-windows-gcc-14.2.0-mingw-64-bit
     +---SFML-3.0.0
         +---bin
         +---doc
-        ï¿½   +---html
-        ï¿½       +---search
+        ¦   +---html
+        ¦       +---search
         +---examples
-        ï¿½   +---assets
-        ï¿½   +---event_handling
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---ftp
-        ï¿½   +---island
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---joystick
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---keyboard
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---opengl
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---raw_input
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---shader
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---sockets
-        ï¿½   +---sound
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---sound_capture
-        ï¿½   +---sound_effects
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---stencil
-        ï¿½   +---tennis
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---voip
-        ï¿½   +---vulkan
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---win32
-        ï¿½   ï¿½   +---resources
-        ï¿½   +---window
+        ¦   +---assets
+        ¦   +---event_handling
+        ¦   ¦   +---resources
+        ¦   +---ftp
+        ¦   +---island
+        ¦   ¦   +---resources
+        ¦   +---joystick
+        ¦   ¦   +---resources
+        ¦   +---keyboard
+        ¦   ¦   +---resources
+        ¦   +---opengl
+        ¦   ¦   +---resources
+        ¦   +---raw_input
+        ¦   ¦   +---resources
+        ¦   +---shader
+        ¦   ¦   +---resources
+        ¦   +---sockets
+        ¦   +---sound
+        ¦   ¦   +---resources
+        ¦   +---sound_capture
+        ¦   +---sound_effects
+        ¦   ¦   +---resources
+        ¦   +---stencil
+        ¦   +---tennis
+        ¦   ¦   +---resources
+        ¦   +---voip
+        ¦   +---vulkan
+        ¦   ¦   +---resources
+        ¦   +---win32
+        ¦   ¦   +---resources
+        ¦   +---window
         +---include
-        ï¿½   +---SFML
-        ï¿½       +---Audio
-        ï¿½       +---Graphics
-        ï¿½       +---Network
-        ï¿½       +---System
-        ï¿½       +---Window
+        ¦   +---SFML
+        ¦       +---Audio
+        ¦       +---Graphics
+        ¦       +---Network
+        ¦       +---System
+        ¦       +---Window
         +---lib
             +---cmake
                 +---FLAC

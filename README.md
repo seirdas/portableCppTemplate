@@ -18,8 +18,9 @@ The project has been tested with the following extensions installed:
 
 The following compilers have been tested and confirmed to work with this project:
 
-- **w64devkit-x64-2.0.0** with **make.exe**, **g++** and **gdb.exe**.
+- **w64devkit-x64-2.0.0** with **make.exe**, **g++** and **gdb.exe**. **NOT COMPATIBLE WITH SFML 3.0**.
 - **TDM-GCC-64** with **mingw32-make.exe**, **g++** and **gdb.exe**.
+- **winlibs-14.2.0**, with **mingw32-make.exe**, **g++** and **gdb.exe**.
 
 Follow these steps to compile and run your project in Visual Studio Code:
 
