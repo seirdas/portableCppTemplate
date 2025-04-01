@@ -31,7 +31,7 @@ else
 endif
 
 ############### Compiler params ###############
-CFLAGS 				:= -Wall -Wextra -std=c++17 
+CFLAGS 				:= -Wall -Wextra -std=c++17
 ifeq ($(findstring debug, $(BUILD_TYPE)), debug)
 	CFLAGS 			+= -g -O0
 else
@@ -77,16 +77,10 @@ RESOURCES 			:= $(wildcard $(RESDIR)/*.rc)
 OBJS	 			+= $(RESOURCES:$(RESDIR)/%.rc=$(OBJDIR)/%.res.o)
 
 ############### Dependencies ###############
+# comment those that you don't need
 -include dependencies/SFML.mk
-INCLUDES 			+= $(SFML_INCLUDE)
-LINKS 				+= $(SFML_LINKS)		# -L(PATH) -l(libs), for static will be -l(libs)-s
-DLLS 				+= $(SFML_DLLS)
+-include dependencies/wxWidgets.mk
 
-# for sfml dynamic linking, the program will need stdc++-6.dll, gcc_s_dw2-1.dll and libwinpthread-1.dll
-# add them to the dlls list
-ifeq ($(findstring dynamic, $(LIBS)), dynamic)
-	DLLS 			+= libgcc_s_seh-1.dll libstdc++-6.dll libwinpthread-1.dll
-endif
 
 ############### Pre-requisites ###############
 TARGET_PREREQUISITES:=$(OBJDIR) $(BINDIR) $(OBJS) 
@@ -110,10 +104,13 @@ $(OBJDIR) $(BINDIR):
 
 # Copy dlls
 $(BINDIR)/%.dll:
-	$(if $(filter $(notdir $@),$(COMPILER_DLLS)),@$(COPY) "$(subst /,\,$(COMPILER_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
-	$(if $(filter $(notdir $@),$(MINGW_DLLS)),@$(COPY) "$(subst /,\,$(MINGW_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
-	$(if $(filter $(notdir $@),$(SFML_DLLS)),@$(COPY) "$(subst /,\,$(SFML_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
-# 	Add other DLLs in the same way, changing SFML_DLLS
+	$(if $(filter $(notdir $@),$(COMPILER_DLLS)),\
+		@$(COPY) "$(subst /,\,$(COMPILER_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
+	$(if $(filter $(notdir $@),$(MINGW_DLLS)),\
+		@$(COPY) "$(subst /,\,$(MINGW_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
+	$(if $(filter $(notdir $@),$(SFML_DLLS)),\
+		@$(COPY) "$(subst /,\,$(SFML_BIN)/$(notdir $@))" "$(subst /,\,$@)",)
+# 	Add other DLLs in the same way, changing DLLS list and folder
 
 ### CREATE EXECUTABLE - Link object files (with -L linker)
 $(BINDIR)/$(TARGET): $(TARGET_PREREQUISITES)
