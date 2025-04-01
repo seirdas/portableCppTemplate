@@ -4,10 +4,10 @@
             "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${config:DEFAULT_PATH}/lib",
-                "${workspaceFolder}/dependencies/**/include"
+                "${workspaceFolder}/dependencies/**/include",
+                "${config:DEFAULT_PATH}/lib"
             ],
-            "compilerPath": "${config:DEFAULT_PATH}/bin/g++.exe",
+            "compilerPath": "${config:DEFAULT_PATH}\\${config:G++_EXE}",
             "cStandard": "c23",
             "cppStandard": "c++17",
             "intelliSenseMode": "${default}",
